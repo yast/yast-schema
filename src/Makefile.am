@@ -6,4 +6,3 @@ EXTRA_DIST = \
 	     common.rnc
 
 
-include $(top_srcdir)/Makefile.am.common

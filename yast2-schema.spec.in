@@ -22,11 +22,14 @@ sh ./scripts/collect.sh
 install -d $RPM_BUILD_ROOT/usr/share/YaST2/schema/autoyast/rng
 cp src/rng/*.rng $RPM_BUILD_ROOT/usr/share/YaST2/schema/autoyast/rng
 
+xsltproc doc/RngToRncHtml.xsl \
+$RPM_BUILD_ROOT/usr/share/YaST2/schema/autoyast/rng/profile.rng > \
+$RPM_BUILD_ROOT/@docdir@/autoyast.html
 
 @CLEAN@
 
 %files
 %defattr(-,root,root)
 /usr/share/YaST2/schema/autoyast/rng/*.rng
-%doc @docdir@
+%doc @docdir@ 
 

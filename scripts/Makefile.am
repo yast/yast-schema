@@ -2,4 +2,3 @@
 
 EXTRA_DIST =  collect.sh
 
-include $(top_srcdir)/Makefile.am.common

@@ -1,0 +1,32 @@
+@HEADER-COMMENT@
+
+# norootforbuild
+# neededforbuild yast2-devel-packages yast2-all-packages libxml2 libxslt
+
+@HEADER@
+BuildArchitectures:	noarch
+
+Summary:	Configuration of schema
+
+%description
+-
+
+@PREP@
+sh ./scripts/collect.sh
+
+@BUILD@
+
+
+@INSTALL@
+
+install -d $RPM_BUILD_ROOT/usr/share/YaST2/schema/autoyast/rng
+cp src/rng/*.rng $RPM_BUILD_ROOT/usr/share/YaST2/schema/autoyast/rng
+
+
+@CLEAN@
+
+%files
+%defattr(-,root,root)
+/usr/share/YaST2/schema/autoyast/rng/*.rng
+%doc @docdir@
+

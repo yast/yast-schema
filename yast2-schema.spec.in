@@ -1,7 +1,7 @@
 @HEADER-COMMENT@
 
 # norootforbuild
-# neededforbuild yast2-devel-packages yast2-all-packages libxml2 libxslt trang libgcj
+# neededforbuild yast2-devel-packages yast2-all-packages -yast2-build-test libxml2 libxslt trang libgcj
 
 @HEADER@
 BuildArchitectures:	noarch

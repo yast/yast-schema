@@ -1,7 +1,7 @@
 @HEADER-COMMENT@
 
 # norootforbuild
-# neededforbuild yast2-devel-packages yast2-all-packages libxml2 libxslt
+# neededforbuild yast2-devel-packages yast2-all-packages libxml2 libxslt trang libgcj
 
 @HEADER@
 BuildArchitectures:	noarch
@@ -30,6 +30,7 @@ $RPM_BUILD_ROOT/@docdir@/autoyast.html
 
 %files
 %defattr(-,root,root)
+%dir /usr/share/YaST2/schema/autoyast/rng
 /usr/share/YaST2/schema/autoyast/rng/*.rng
 %doc @docdir@ 
 

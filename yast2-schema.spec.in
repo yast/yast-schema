@@ -1,7 +1,7 @@
 @HEADER-COMMENT@
 
 # norootforbuild
-# neededforbuild yast2-devel-packages yast2-all-packages -yast2-build-test libxml2 libxslt trang libgcj
+# neededforbuild yast2-devel-packages yast2-all-packages -yast2-build-test libxml2 libxslt java2 jing trang
 
 @HEADER@
 BuildArchitectures:	noarch
@@ -12,25 +12,19 @@ Summary:	Configuration of schema
 -
 
 @PREP@
-sh ./scripts/collect.sh
 
 @BUILD@
 
 
 @INSTALL@
 
-install -d $RPM_BUILD_ROOT/usr/share/YaST2/schema/autoyast/rng
-cp src/rng/*.rng $RPM_BUILD_ROOT/usr/share/YaST2/schema/autoyast/rng
-
-xsltproc doc/RngToRncHtml.xsl \
-$RPM_BUILD_ROOT/usr/share/YaST2/schema/autoyast/rng/profile.rng > \
-$RPM_BUILD_ROOT/@docdir@/autoyast.html
-
 @CLEAN@
 
 %files
 %defattr(-,root,root)
-%dir /usr/share/YaST2/schema/autoyast/rng
-/usr/share/YaST2/schema/autoyast/rng/*.rng
+%dir @schemadir@/autoyast/rnc
+@schemadir@/autoyast/rnc/*.rnc
+%dir @schemadir@/autoyast/rng
+@schemadir@/autoyast/rng/*.rng
 %doc @docdir@ 
 

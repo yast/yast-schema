@@ -1,4 +1,11 @@
 -------------------------------------------------------------------
+Tue Jun  7 18:45:01 CEST 2005 - mvidner@suse.cz
+
+- Build it in makefiles, not in the spec file.
+- Build fix: trang now requires JRE.
+- 2.12.1
+
+-------------------------------------------------------------------
 Tue Sep  7 03:57:29 CEST 2004 - nashif@suse.de
 
 - Removed nfb cycle

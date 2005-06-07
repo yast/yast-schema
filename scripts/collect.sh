@@ -1,23 +1,22 @@
 #!/bin/sh
 # Anas Nashif <nashif@suse.de>
-# collect RNC files and create RNG out of them
+# Martin Vidner <mvidner@suse.cz>
+# collect RNC files, create a schema in cwd
 #
+set -o errexit
 
 : ${PREFIX:=/usr}
 SCHEMA_DIR="$PREFIX/share/YaST2/schema/autoyast/rnc"
 DESKTOP_DIR="$PREFIX/share/autoinstall/modules"
 DESKTOP_DIR2="$PREFIX/share/applications/YaST2"
 
-#unused
-tmp_dir=`mktemp -d /tmp/schema.XXXXXXXXXX`
-
-RNC_OUTPUT="src/rnc"
-RNG_OUTPUT="src/rng"
-
-mkdir -p $RNC_OUTPUT $RNG_OUTPUT
+: ${SRC:=src}
+: ${RNC_OUTPUT:=.}
+COMMON=$SRC/common.rnc
+TEMPLATE=$SRC/profile.rnc.templ
 
 rm -f $RNC_OUTPUT/includes.rnc
-cp src/common.rnc $RNC_OUTPUT
+cp $COMMON $RNC_OUTPUT
 
 
 # initialize
@@ -63,15 +62,10 @@ for desktop in `find $DESKTOP_DIR $DESKTOP_DIR2 -name '*.desktop'`; do
     fi
 
 done
-
+echo >&2 "install:   $install"
+echo >&2 "configure: $configure"
 
 # add those components we have found
 sed -e "s/CONFIGURE_RESOURCE/${configure}/" \
     -e "s/INSTALL_RESOURCE/${install}/" \
-    src/profile.rnc.templ > $RNC_OUTPUT/profile.rnc
-
-# Now convert from RNC to RNG
-trang -I rnc -O rng $RNC_OUTPUT/profile.rnc $RNG_OUTPUT/profile.rng
-
-# clean up
-rm -rf $tmp_dir
+    $TEMPLATE > $RNC_OUTPUT/profile.rnc

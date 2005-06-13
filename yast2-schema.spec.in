@@ -22,8 +22,6 @@ Summary:	Configuration of schema
 
 %files
 %defattr(-,root,root)
-%dir @schemadir@/autoyast/rnc
-@schemadir@/autoyast/rnc/*.rnc
 %dir @schemadir@/autoyast/rng
 @schemadir@/autoyast/rng/*.rng
 %doc @docdir@ 

@@ -1,4 +1,11 @@
 -------------------------------------------------------------------
+Mon Jun 13 11:25:20 CEST 2005 - mvidner@suse.cz
+
+- Don't install generated RNC files, they create conflicts.
+- Don't distribute generated HTML docs.
+- 2.12.2
+
+-------------------------------------------------------------------
 Tue Jun  7 18:45:01 CEST 2005 - mvidner@suse.cz
 
 - Build it in makefiles, not in the spec file.

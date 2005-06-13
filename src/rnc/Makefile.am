@@ -9,7 +9,3 @@ profile.rnc:
 
 clean-local:
 	rm -rf *.rnc
-
-install-data-local:
-	$(INSTALL) -d $(DESTDIR)$(schemadir)/autoyast/rnc
-	$(INSTALL) -m 644 *.rnc $(DESTDIR)$(schemadir)/autoyast/rnc

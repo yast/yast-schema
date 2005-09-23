@@ -1,10 +1,13 @@
 # Makefile.am for schema/src/rnc
 
-# we do not know what files there will be
-# but profile.rnc is for sure
+# The collect script also copies other *.rnc files here.
 
-all-local: profile.rnc
-profile.rnc:
+rncdir=$(schemadir)/autoyast/rnc
+rnc_DATA=profile.rnc includes.rnc
+
+# make multiple files in a single run. must use artificial patterns to
+# distinguish it from a regular make rule
+profile.% includes.%:
 	PREFIX=$(prefix) SRC=$(srcdir)/.. $(top_srcdir)/scripts/collect.sh
 
 clean-local:

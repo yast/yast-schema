@@ -20,9 +20,8 @@ cp $COMMON $RNC_OUTPUT
 
 
 # initialize
-# (so that we can start connecting with '&')
-install=notAllowed
-configure=notAllowed
+install=""
+configure=""
 
 # check all desktop files
 
@@ -45,7 +44,7 @@ for desktop in `find $DESKTOP_DIR $DESKTOP_DIR2 -name '*.desktop'`; do
 
         cp  $SCHEMA_DIR/${X_SuSE_YaST_AutoInstSchema} $RNC_OUTPUT
         
-        echo "include '${resource}.rnc'" >> $RNC_OUTPUT/includes.rnc
+        echo "include '${X_SuSE_YaST_AutoInstSchema}'" >> $RNC_OUTPUT/includes.rnc
 
         if [ -z "$X_SuSE_YaST_AutoInstOptional" -o "$X_SuSE_YaST_AutoInstOptional" = "true" ]; then
 	    optional="?"
@@ -53,17 +52,25 @@ for desktop in `find $DESKTOP_DIR $DESKTOP_DIR2 -name '*.desktop'`; do
 	    optional=""
 	fi
 
-	# '&' must be escaped because of sed
 	if [ "$X_SuSE_YaST_AutoInstPath" = "install" ]; then
-	    install="$install \& $resource$optional"
+	    install="$install & $resource$optional"
 	else
-	    configure="$configure \& $resource$optional"
+	    configure="$configure & $resource$optional"
         fi
     fi
 
 done
+
+# remove the initial connector
+install="${install# & }"
+configure="${configure# & }"
+
 echo >&2 "install:   $install"
 echo >&2 "configure: $configure"
+
+# escape the connector for sed: & -> \&
+install="${install//&/\\&}"
+configure="${configure//&/\\&}"
 
 # add those components we have found
 sed -e "s/CONFIGURE_RESOURCE/${configure}/" \

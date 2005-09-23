@@ -1,4 +1,15 @@
 -------------------------------------------------------------------
+Fri Sep 23 15:42:32 CEST 2005 - mvidner@suse.cz
+
+- More documentation, renamed it so that it does not clash it with the
+  copyright files.
+- Do not use notAllowed, it is unclear and validators disagree.
+- Allow X_SuSE_YaST_AutoInstResource and X_SuSE_YaST_AutoInstSchema to
+  differ.
+- Install forgotten RNC files.
+- 2.13.0
+
+-------------------------------------------------------------------
 Mon Jun 13 11:25:20 CEST 2005 - mvidner@suse.cz
 
 - Don't install generated RNC files, they create conflicts.

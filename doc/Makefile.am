@@ -2,7 +2,7 @@
 
 htmldir = $(docdir)
 
-doc_DATA = README
+doc_DATA = yast2-schema
 html_DATA = autoyast.html
 STYLESHEET = RngToRncHtml.xsl RngToRncXml.xsl RngToRncProcessorConfig.xsl
 

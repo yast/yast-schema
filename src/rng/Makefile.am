@@ -4,9 +4,12 @@
 RNCDIR=../rnc
 RNCS=$(wildcard $(RNCDIR)/*.rnc)
 
-all-local: profile.rng
+all-local: profile.rng rules.rng classes-decl.rng
 profile.rng: $(RNCS)
 	trang -I rnc -O rng $(RNCDIR)/profile.rnc $@
+# generic rule
+%.rng: $(schemadir)/autoyast/rnc/%.rnc
+	trang $< $@
 
 clean-local:
 	rm -rf *.rng

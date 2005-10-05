@@ -1,4 +1,10 @@
 -------------------------------------------------------------------
+Wed Oct  5 14:35:40 CEST 2005 - mvidner@suse.cz
+
+- Added rules, classes-*, and profile-misc.
+- 2.13.1
+
+-------------------------------------------------------------------
 Fri Sep 23 15:42:32 CEST 2005 - mvidner@suse.cz
 
 - More documentation, renamed it so that it does not clash it with the

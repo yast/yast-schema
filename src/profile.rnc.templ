@@ -5,8 +5,12 @@ namespace a = "http://relaxng.org/ns/compatibility/annotations/1.0"
 include "common.rnc"
 include "includes.rnc"
 
+include "classes-use.rnc"
+## shared elements that haven't been split yet
+include "profile-misc.rnc"
+
 configure_contents = CONFIGURE_RESOURCE
-install_contents = INSTALL_RESOURCE
+install_contents = classes? & INSTALL_RESOURCE
 
 profile = element profile {
    profile_compatibility_sl93 |

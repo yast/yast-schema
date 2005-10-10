@@ -1,0 +1,35 @@
+Generate RNG Schema from RNC and RNY Files
+==========================================
+
+
+How It Works
+------------
+
+The individual YaST packages carry their part of the schema with them
+in RNC form and install it to /usr/share/YaST2/schema/autoyast/rnc.
+At build time, yast2-schema.rpm takes all these files and writes a
+master file, profile.rnc, that references all these pieces.
+It also converts RNC to RNG because the latter format has alightweight
+validator.
+
+(RNY is not used yet)
+
+How to Move the Schema to Your Module
+-------------------------------------
+
+Basically, move the rnc file from autoyast.rpm to your package and
+enter its name to your desktop file. Details follow.
+
+Go to trunk/autoinstallation/src/data/rng. Find your schema part there
+and move it (svn mv) somewhere to your module. Don't forget to remove
+it from the Makefile.am in autoinstallation.
+
+Edit the desktop file in your module and add
+  X-SuSE-YaST-AutoInstSchema=foo.rnc
+where foo.rnc is the schema part.
+
+In Makefile.am, add
+  rncdir =  $(schemadir)/autoyast/rnc
+  rnc_DATA = foo.rnc
+and add $(rnc_DATA) to EXTRA_DIST.
+Add @schemadir@/autoyast/rnc/foo.rnc to the spec file list.

@@ -1,0 +1,40 @@
+-------------------------------------------------------------------
+Mon Oct 10 11:15:10 CEST 2005 - mvidner@suse.cz
+
+- Added rules, classes-*, and (disabled) profile-misc.
+- 2.13.1
+
+-------------------------------------------------------------------
+Fri Sep 23 15:42:32 CEST 2005 - mvidner@suse.cz
+
+- More documentation, renamed it so that it does not clash it with the
+  copyright files.
+- Do not use notAllowed, it is unclear and validators disagree.
+- Allow X_SuSE_YaST_AutoInstResource and X_SuSE_YaST_AutoInstSchema to
+  differ.
+- Install forgotten RNC files.
+- 2.13.0
+
+-------------------------------------------------------------------
+Mon Jun 13 11:25:20 CEST 2005 - mvidner@suse.cz
+
+- Don't install generated RNC files, they create conflicts.
+- Don't distribute generated HTML docs.
+- 2.12.2
+
+-------------------------------------------------------------------
+Tue Jun  7 18:45:01 CEST 2005 - mvidner@suse.cz
+
+- Build it in makefiles, not in the spec file.
+- Build fix: trang now requires JRE.
+- 2.12.1
+
+-------------------------------------------------------------------
+Tue Sep  7 03:57:29 CEST 2004 - nashif@suse.de
+
+- Removed nfb cycle
+
+-------------------------------------------------------------------
+Wed Aug 18 19:32:47 2004 - nashif@suse.de
+
+- initial version

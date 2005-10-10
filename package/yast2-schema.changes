@@ -1,7 +1,7 @@
 -------------------------------------------------------------------
-Wed Oct  5 14:35:40 CEST 2005 - mvidner@suse.cz
+Mon Oct 10 11:15:10 CEST 2005 - mvidner@suse.cz
 
-- Added rules, classes-*, and profile-misc.
+- Added rules, classes-*, and (disabled) profile-misc.
 - 2.13.1
 
 -------------------------------------------------------------------

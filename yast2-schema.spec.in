@@ -1,9 +1,9 @@
 @HEADER-COMMENT@
 
 # norootforbuild
-# neededforbuild yast2-devel-packages yast2-all-packages -yast2-build-test libxml2 libxslt java2 jing trang
 
 @HEADER@
+BuildRequires:	java2-devel-packages trang yast2-all-packages yast2-devel-packages
 BuildArchitectures:	noarch
 
 Summary:	Configuration of schema

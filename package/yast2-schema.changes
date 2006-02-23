@@ -1,4 +1,12 @@
 -------------------------------------------------------------------
+Thu Feb 23 16:01:21 CET 2006 - mvidner@suse.cz
+
+- converted neededforbuild to BuildRequires (mls)
+- broke a build cycle with yast2-online-update (ro)
+- removed yast2-devel-packages, yast2-all-packages is enough
+- 2.13.2
+
+-------------------------------------------------------------------
 Mon Oct 10 11:15:10 CEST 2005 - mvidner@suse.cz
 
 - Added rules, classes-*, and (disabled) profile-misc.

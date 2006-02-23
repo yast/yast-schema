@@ -3,7 +3,8 @@
 # norootforbuild
 
 @HEADER@
-BuildRequires:	java2-devel-packages trang yast2-all-packages yast2-devel-packages
+BuildRequires:	java2-devel-packages trang yast2-all-packages
+#!BuildIgnore: yast2-build-test yast2-online-update
 BuildArchitectures:	noarch
 
 Summary:	Configuration of schema

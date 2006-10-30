@@ -31,7 +31,7 @@ for desktop in `find $DESKTOP_DIR $DESKTOP_DIR2 -name '*.desktop'`; do
     unset X_SuSE_YaST_AutoInstPath
     unset X_SuSE_YaST_AutoInstOptional
 
-    eval $(grep "^X-SuSE-YaST" $desktop | sed -e 's/-/_/g' )
+    eval $(grep "^X-SuSE-YaST" $desktop | sed -e 's/X-SuSE-YaST-/X_SuSE_YaST_/' )
 
     if [ -z "$X_SuSE_YaST_AutoInstResource" ]; then
         resource=`basename $desktop .desktop`

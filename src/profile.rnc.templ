@@ -12,9 +12,12 @@ include "classes-use.rnc"
 configure_contents = CONFIGURE_RESOURCE
 install_contents = classes? & INSTALL_RESOURCE
 
+profile_resource = classes? & CONFIGURE_RESOURCE & INSTALL_RESOURCE
+
 profile = element profile {
    profile_compatibility_sl93 |
-   profile_current
+#   profile_current
+   profile_resource
 }
 
 profile_compatibility_sl93 =

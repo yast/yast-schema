@@ -1,4 +1,14 @@
 -------------------------------------------------------------------
+Tue Nov 21 16:21:21 CET 2006 - ug@suse.de
+
+- for some reason the order of the elements is important
+  for xmllint. This is a workaround for that problem.
+  It might be a bug in xmllint and requires further
+  investigation.
+  (#222956)
+- 2.14.1
+
+-------------------------------------------------------------------
 Mon Nov 13 14:00:14 CET 2006 - jsrain@suse.cz
 
 - 2.14.0

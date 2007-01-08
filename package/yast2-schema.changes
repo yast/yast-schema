@@ -1,4 +1,14 @@
 -------------------------------------------------------------------
+Mon Jan  8 14:32:33 CET 2007 - ug@suse.de
+
+- for some reason the order of the elements is important
+  for xmllint. This is a workaround for that problem.
+  It might be a bug in xmllint and requires further
+  investigation.
+  (#222956)
+- 2.13.4
+
+-------------------------------------------------------------------
 Mon Oct 30 09:53:03 CET 2006 - mvidner@suse.cz
 
 - Fixed too aggressive escaping which broke on files-with-dashes.rnc

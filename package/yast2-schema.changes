@@ -1,4 +1,10 @@
 -------------------------------------------------------------------
+Wed Jan 31 10:44:37 CET 2007 - mvidner@suse.cz
+
+- Include also user_defaults and groups with users (#215249#c7).
+- 2.13.5
+
+-------------------------------------------------------------------
 Mon Jan  8 14:32:33 CET 2007 - ug@suse.de
 
 - for some reason the order of the elements is important

@@ -1,4 +1,10 @@
 -------------------------------------------------------------------
+Tue Mar 27 11:34:29 CEST 2007 - mvidner@suse.cz
+
+- Ignore tomcat5 while building to save time.
+- 2.15.0
+
+-------------------------------------------------------------------
 Wed Nov 22 16:49:00 CET 2006 - mvidner@suse.cz
 
 - Include also user_defaults and groups with users (#215249#c7).

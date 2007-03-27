@@ -5,6 +5,8 @@
 @HEADER@
 BuildRequires:	java2-devel-packages trang yast2-all-packages
 #!BuildIgnore: yast2-build-test yast2-online-update
+# optimization suggested by AJ:
+#!BuildIgnore: tomcat5
 BuildArchitectures:	noarch
 
 Summary:	Configuration of schema

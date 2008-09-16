@@ -1,4 +1,10 @@
 -------------------------------------------------------------------
+Tue Sep 16 09:36:00 CEST 2008 - locilka@suse.cz
+
+- Ignoring conflicting packages (yast2-branding-*, yast2-theme-*).
+- 2.17.0
+
+-------------------------------------------------------------------
 Tue Mar 27 11:34:29 CEST 2007 - mvidner@suse.cz
 
 - Ignore tomcat5 while building to save time.

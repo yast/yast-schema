@@ -7,6 +7,9 @@ BuildRequires:	java2-devel-packages trang yast2-all-packages
 #!BuildIgnore: yast2-build-test yast2-online-update
 # optimization suggested by AJ:
 #!BuildIgnore: tomcat5
+# ignoring conflicting packages
+#!BuildIgnore: yast2-branding-SLED yast2-branding-openSUSE
+#!BuildIgnore: yast2-theme yast2-theme-SLED yast2-theme-openSUSE
 BuildArchitectures:	noarch
 
 Summary:	Configuration of schema

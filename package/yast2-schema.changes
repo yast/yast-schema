@@ -1,4 +1,10 @@
 -------------------------------------------------------------------
+Fri Sep 26 17:14:50 CEST 2008 - locilka@suse.cz
+
+- Adding some more BuildIgnores to build the package (bnc #427684).
+- 2.17.1
+
+-------------------------------------------------------------------
 Tue Sep 16 09:36:00 CEST 2008 - locilka@suse.cz
 
 - Ignoring conflicting packages (yast2-branding-*, yast2-theme-*).

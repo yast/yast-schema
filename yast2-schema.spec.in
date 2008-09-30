@@ -12,12 +12,16 @@ BuildRequires:	java2-devel-packages trang yast2-all-packages
 
 # ignoring conflicting packages
 #!BuildIgnore: yast2-branding-SLED yast2-branding-openSUSE
-#!BuildIgnore: yast2-theme yast2-theme-SLED yast2-theme-openSUSE
+#!BuildIgnore: yast2-theme yast2-theme-SLED yast2-theme-openSUSE yast2-theme-SLE
 
 # Hotfix to build a package, bnc #427684
 #!BuildIgnore: xerces-j2-bootstrap libusb-0_1-4 crimson
-# Speedup
-#!BuildIgnore: yast2-pkg-bindings-devel-doc yast2-pkg-bindings zypper
+
+# Just a S390 thingie
+#!BuildIgnore: yast2-reipl
+
+# To speedup && to easily recover from dependency hell
+#!BuildIgnore: yast2-pkg-bindings-devel-doc yast2-pkg-bindings zypper libzypp yast2-gtk yast2-qt yast2-ncurses yast2-qt-pkg yast2-ncurses-pkg
 
 BuildArchitectures:	noarch
 

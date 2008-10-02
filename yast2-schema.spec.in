@@ -4,7 +4,9 @@
 
 @HEADER@
 
-BuildRequires:	java2-devel-packages trang yast2-all-packages
+BuildRequires:	java2-devel-packages trang yast2-all-packages 
+# yast2-core omited from some reason in buildservice, adding explicitly
+BuildRequires:  yast2-core
 #!BuildIgnore: yast2-build-test yast2-online-update
 
 # optimization suggested by AJ:

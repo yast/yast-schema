@@ -4,8 +4,6 @@
 SUBDIRS = rnc rng
 
 rncdir=$(schemadir)/autoyast/rnc
-rnc_DATA=common.rnc
 
 EXTRA_DIST = \
-	     profile.rnc.templ \
-	     common.rnc
+	     profile.rnc.templ

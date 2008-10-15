@@ -45,7 +45,6 @@ Summary:	Configuration of schema
 %defattr(-,root,root)
 %dir @schemadir@/autoyast/rnc
 @schemadir@/autoyast/rnc/profile.rnc
-@schemadir@/autoyast/rnc/common.rnc
 @schemadir@/autoyast/rnc/includes.rnc
 %dir @schemadir@/autoyast/rng
 @schemadir@/autoyast/rng/*.rng

@@ -12,7 +12,7 @@ DESKTOP_DIR2="$PREFIX/share/applications/YaST2"
 
 : ${SRC:=src}
 : ${RNC_OUTPUT:=.}
-COMMON=$SRC/common.rnc
+COMMON=$SCHEMA_DIR/common.rnc
 TEMPLATE=$SRC/profile.rnc.templ
 
 rm -f $RNC_OUTPUT/includes.rnc

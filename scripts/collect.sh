@@ -25,7 +25,7 @@ configure=""
 
 # check all desktop files
 
-for desktop in `find $DESKTOP_DIR $DESKTOP_DIR2 -name '*.desktop'`; do
+for desktop in `find $DESKTOP_DIR $DESKTOP_DIR2 -name '*.desktop' | LC_ALL=C sort`; do
     unset X_SuSE_YaST_AutoInstSchema
     unset X_SuSE_YaST_AutoInstResource
     unset X_SuSE_YaST_AutoInstPath

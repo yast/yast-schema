@@ -1,4 +1,10 @@
 -------------------------------------------------------------------
+Wed Feb 11 09:48:39 CET 2009 - mvidner@suse.cz
+
+- Sort found files to avoid unnecessary rebuilds.
+- 2.18.0
+
+-------------------------------------------------------------------
 Wed Oct 15 13:43:16 CEST 2008 - ug@suse.de
 
 - moved common.rnc from yast2-schema to autoyast2 to

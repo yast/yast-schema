@@ -27,7 +27,7 @@ BuildRequires:  yast2-core
 
 BuildArchitectures:	noarch
 
-Summary:	Configuration of schema
+Summary:	YaST2 - AutoYaST Schema
 
 %description
 -

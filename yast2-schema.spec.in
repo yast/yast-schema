@@ -3,6 +3,7 @@
 # norootforbuild
 
 @HEADER@
+Group:	System/YaST
 License: GPL v2 or later
 
 BuildRequires:	java2-devel-packages trang yast2-all-packages 

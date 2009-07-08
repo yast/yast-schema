@@ -42,7 +42,7 @@ for desktop in `find $DESKTOP_DIR $DESKTOP_DIR2 -name '*.desktop' | LC_ALL=C sor
     # HACK: avoid creating a separate desktop file
     # for user_defaults (#215249#c7)
     if [ "$resource" = "users" ]; then
-	resource="user_defaults? & groups? & users? & login_settings?"
+	resource="user_defaults? & groups? & login_settings? & users"
     fi
 
     if [ ! -z "${X_SuSE_YaST_AutoInstSchema}" ]; then

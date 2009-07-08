@@ -1,4 +1,9 @@
 -------------------------------------------------------------------
+Wed Jul  8 12:50:36 CEST 2009 - ug@suse.de
+
+- fixed the workaround for the users rnc files
+
+-------------------------------------------------------------------
 Wed Feb 11 09:48:39 CET 2009 - mvidner@suse.cz
 
 - Sort found files to avoid unnecessary rebuilds.

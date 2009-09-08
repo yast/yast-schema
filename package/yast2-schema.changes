@@ -1,4 +1,10 @@
 -------------------------------------------------------------------
+Tue Sep  8 10:24:34 CEST 2009 - mvidner@suse.cz
+
+- Build fix: Eval only X-SuSE-YaST-AutoInst*, not X-SuSE-YaST-Keywords.
+- 2.18.2
+
+-------------------------------------------------------------------
 Wed Jul  8 12:50:36 CEST 2009 - ug@suse.de
 
 - fixed the workaround for the users rnc files

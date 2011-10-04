@@ -4,7 +4,7 @@
 
 @HEADER@
 Group:	System/YaST
-License: GPL v2 or later
+License: GPL-2.0+
 
 BuildRequires:	java2-devel-packages trang yast2-all-packages 
 # yast2-core omited from some reason in buildservice, adding explicitly

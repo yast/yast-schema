@@ -4,10 +4,22 @@
 
 @HEADER@
 
-BuildRequires:	java2-devel-packages trang yast2-all-packages 
+BuildRequires:	java2-devel-packages trang
 # yast2-core omited from some reason in buildservice, adding explicitly
 BuildRequires:  yast2-core
 #!BuildIgnore: yast2-build-test yast2-online-update
+
+BuildRequires:       autoyast2 autoyast2-installation yast2 yast2-add-on yast2-add-on-creator yast2-apparmor yast2-audit-laf yast2-autofs yast2-backup yast2-bootloader yast2-boot-server yast2-ca-management yast2-CASA yast2-casa-ats yast2-country yast2-country-data yast2-dhcp-server yast2-dirinstall yast2-dns-server yast2-drbd yast2-fingerprint-reader yast2-firewall yast2-firstboot yast2-ftp-server yast2-gtk yast2-hardware-detection yast2-heartbeat yast2-http-server yast2-inetd yast2-inetd-doc yast2-installation yast2-installation-devel-doc yast2-instserver yast2-irda yast2-iscsi-client yast2-iscsi-server yast2-isns yast2-issleconfig yast2-kdump yast2-kerberos-client yast2-kerberos-server yast2-ldap yast2-ldap-client yast2-ldap-server yast2-libyui yast2-libyui-devel yast2-linux-user-mgmt yast2-live-installer yast2-mail yast2-mail-plugins yast2-mcs-plugin yast2-metapackage-handler yast2-mouse yast2-multipath yast2-ncurses yast2-ncurses-devel yast2-ncurses-pkg yast2-network yast2-network-devel-doc yast2-nfs-client yast2-nfs-common yast2-nfs-server yast2-nis-client yast2-nis-server yast2-nis-server-devel-doc yast2-ntp-client yast2-online-update yast2-online-update-frontend yast2-packager yast2-pam yast2-perl-bindings yast2-phone-services yast2-pkg-bindings yast2-pkg-bindings-devel-doc yast2-power-management yast2-printer yast2-printer-devel-doc yast2-product-creator yast2-profile-manager yast2-python-bindings yast2-qt yast2-qt-devel yast2-qt-pkg yast2-registration yast2-repair yast2-restore yast2-ruby-bindings yast2-runlevel yast2-samba-client yast2-samba-server yast2-scanner yast2-security yast2-slp yast2-slp-server yast2-squid yast2-sshd yast2-storage yast2-storage-devel yast2-storage-lib yast2-sudo yast2-support yast2-sysconfig yast2-system-profile yast2-s390 yast2-testsuite yast2-tftp-server yast2-tune yast2-update yast2-update-FACTORY yast2-users yast2-xml yast2-ycp-ui-bindings yast2-ycp-ui-bindings-devel
+%ifnarch ia64 ppc ppc64 s390 s390x
+BuildRequires:       yast2-vm
+%endif
+%ifnarch s390 s390x
+BuildRequires:       yast2-tv yast2-sound yast2-x11
+%endif
+%ifarch x390 s390x
+BuildRequires: yast2-reipl
+%endif
+
 
 # optimization suggested by AJ:
 #!BuildIgnore: tomcat5
@@ -25,9 +37,9 @@ BuildRequires:  yast2-core
 # To speedup && to easily recover from dependency hell
 #!BuildIgnore: yast2-pkg-bindings-devel-doc yast2-pkg-bindings zypper libzypp yast2-gtk yast2-qt yast2-ncurses yast2-qt-pkg yast2-ncurses-pkg
 
-BuildArchitectures:	noarch
-
 Summary:	Configuration of schema
+
+#Note: it is intentionally arch-specific; different archs include different packages and therefore result in different schema
 
 %description
 -

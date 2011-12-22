@@ -1,4 +1,12 @@
 -------------------------------------------------------------------
+Thu Dec 22 12:10:51 UTC 2011 - jsrain@suse.cz
+
+- made independent on yast2-all-packages (bnc#712052)
+- made package arch-specific due to different set of YaST packages
+  on different architectures
+- 2.17.5
+
+-------------------------------------------------------------------
 Wed Oct 15 13:43:16 CEST 2008 - ug@suse.de
 
 - moved common.rnc from yast2-schema to autoyast2 to

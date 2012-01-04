@@ -16,7 +16,7 @@ BuildRequires:       yast2-vm
 %ifnarch s390 s390x
 BuildRequires:       yast2-tv yast2-sound yast2-x11
 %endif
-%ifarch x390 s390x
+%ifarch s390 s390x
 BuildRequires: yast2-reipl
 %endif
 

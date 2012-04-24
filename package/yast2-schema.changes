@@ -1,4 +1,10 @@
 -------------------------------------------------------------------
+Tue Apr 24 15:41:04 CEST 2012 - ug@suse.de
+
+- added yast2-online-update-configuration to
+  BUILDREQUIRES
+
+-------------------------------------------------------------------
 Tue Sep  8 10:24:34 CEST 2009 - mvidner@suse.cz
 
 - Build fix: Eval only X-SuSE-YaST-AutoInst*, not X-SuSE-YaST-Keywords.

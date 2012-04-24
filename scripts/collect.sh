@@ -45,6 +45,13 @@ for desktop in `find $DESKTOP_DIR $DESKTOP_DIR2 -name '*.desktop' | LC_ALL=C sor
 	resource="user_defaults? & groups? & login_settings? & users"
     fi
 
+    # same hack as for users. pxe.rnc is part of autoyast but has no client
+    if [ "$resource" = "general" ]; then
+        resource="general? & pxe"
+        cp  $SCHEMA_DIR/pxe.rnc $RNC_OUTPUT
+        echo "include 'pxe.rnc'" >> $RNC_OUTPUT/includes.rnc
+    fi
+
     if [ ! -z "${X_SuSE_YaST_AutoInstSchema}" ]; then
 
         cp  $SCHEMA_DIR/${X_SuSE_YaST_AutoInstSchema} $RNC_OUTPUT

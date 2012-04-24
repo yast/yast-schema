@@ -1,4 +1,10 @@
 -------------------------------------------------------------------
+Tue Apr 24 16:00:17 CEST 2012 - ug@suse.de
+
+- fix for pxe.rnc from the autoyast package
+- 2.22.0
+
+-------------------------------------------------------------------
 Tue Apr 24 15:41:04 CEST 2012 - ug@suse.de
 
 - added yast2-online-update-configuration to

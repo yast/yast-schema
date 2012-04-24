@@ -6,7 +6,13 @@
 Group:	System/YaST
 License: GPL-2.0+
 
-BuildRequires:	java2-devel-packages trang yast2-all-packages 
+# FIXME: drop yast2-all-packages some day
+BuildRequires:	java2-devel-packages trang yast2-all-packages
+
+# not covered by yast2-all-packages
+BuildRequires:	yast2-online-update-configuration
+
+
 # yast2-core omited from some reason in buildservice, adding explicitly
 BuildRequires:  yast2-core
 #!BuildIgnore: yast2-build-test yast2-online-update

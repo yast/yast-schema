@@ -11,8 +11,12 @@ BuildRequires:	java2-devel-packages trang yast2-all-packages
 
 # not covered by yast2-all-packages
 BuildRequires:	yast2-online-update-configuration
-
-
+BuildRequires:	yast2-registration
+%if 0%{?suse_version} && 0%{?sles_version} == 0
+BuildRequires:  yast2-registration-branding-openSUSE
+%else
+BuildRequires: yast2-registration-branding-SLE
+%endif
 # yast2-core omited from some reason in buildservice, adding explicitly
 BuildRequires:  yast2-core
 #!BuildIgnore: yast2-build-test yast2-online-update

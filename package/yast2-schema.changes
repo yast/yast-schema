@@ -1,4 +1,9 @@
 -------------------------------------------------------------------
+Mon Jul  9 15:15:59 CEST 2012 - ug@suse.de
+
+- added the handling for yast2-register
+
+-------------------------------------------------------------------
 Tue Apr 24 16:00:17 CEST 2012 - ug@suse.de
 
 - fix for pxe.rnc from the autoyast package

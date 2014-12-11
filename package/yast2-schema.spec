@@ -17,7 +17,7 @@
 
 
 Name:           yast2-schema
-Version:        3.1.0
+Version:        3.1.0.1
 Release:        0
 
 BuildRoot:      %{_tmppath}/%{name}-%{version}-build
@@ -27,7 +27,7 @@ Group:	        System/YaST
 License:        GPL-2.0+
 
 # FIXME: drop yast2-all-packages some day
-BuildRequires:	java2-devel-packages trang yast2-all-packages
+BuildRequires:	trang yast2-all-packages
 
 # not covered by yast2-all-packages
 BuildRequires:	yast2-online-update-configuration
@@ -52,6 +52,13 @@ BuildRequires:  yast2-core
 
 # To speedup && to easily recover from dependency hell
 #!BuildIgnore: yast2-pkg-bindings-devel-doc yast2-pkg-bindings zypper libzypp yast2-gtk yast2-qt yast2-ncurses yast2-qt-pkg yast2-ncurses-pkg
+
+# Yast packages without AutoYast support
+#!BuildIgnore: yast2-add-on-creator yast2-country-data yast2-firstboot yast2-live-installer yast2-product-creator yast2-trans-allpacks
+#!BuildIgnore: yast2-control-center yast2-control-center-gnome yast2-control-center-qt
+
+# Doc packages
+# !BuildIgnore: yast2-devel-doc yast2-inetd-doc yast2-installation-devel-doc yast2-network-devel-doc yast2-nis-server-devel-doc yast2-printer-devel-doc
 
 BuildArchitectures:	noarch
 

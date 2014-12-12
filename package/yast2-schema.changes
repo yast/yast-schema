@@ -1,4 +1,12 @@
 -------------------------------------------------------------------
+Wed Dec 10 15:16:35 CET 2014 - locilka@suse.com
+
+- Ignoring more packages that do not contain any AutoYaST support
+  during build to shorten the build cycle and to remove unneeded
+  dependencies
+- 3.1.1
+
+-------------------------------------------------------------------
 Thu Sep 19 15:56:38 UTC 2013 - lslezak@suse.cz
 
 - do not use *.spec.in template, use *.spec file with RPM macros

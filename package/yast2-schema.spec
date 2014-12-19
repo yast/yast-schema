@@ -65,6 +65,9 @@ BuildRequires: yast2-proxy
 # Available on SLE (12) only, needs to be adjusted for next SLE
 %if 0%{?suse_version} == 1315
 BuildRequires: yast2-registration
+%endif
+# Package available for S390 only
+%ifarch s390 s390x
 BuildRequires: yast2-s390
 %endif
 BuildRequires: yast2-samba-client
@@ -95,8 +98,6 @@ BuildRequires: yast2-users
 # Yast packages without AutoYast support
 #!BuildIgnore: yast2-country-data
 #!BuildIgnore: yast2-control-center yast2-control-center-gnome yast2-control-center-qt
-
-BuildArchitectures:	noarch
 
 Summary:	YaST2 - AutoYaST Schema
 

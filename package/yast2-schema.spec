@@ -17,7 +17,7 @@
 
 
 Name:           yast2-schema
-Version:        3.1.1
+Version:        3.1.2
 Release:        0
 
 BuildRoot:      %{_tmppath}/%{name}-%{version}-build
@@ -26,16 +26,61 @@ Source0:        %{name}-%{version}.tar.bz2
 Group:	        System/YaST
 License:        GPL-2.0+
 
-# FIXME: drop yast2-all-packages some day
-BuildRequires:	trang yast2-all-packages
+Url:            https://github.com/yast/yast-schema
 
-# not covered by yast2-all-packages
-BuildRequires:	yast2-online-update-configuration
+# Dependencies needed to build the package
+BuildRequires:	trang yast2-devtools yast2-testsuite
+
+# All packages providing RNG files for AutoYaST
+# in /usr/share/YaST2/schema/autoyast/rng/*.rng
+BuildRequires: autoyast2
+BuildRequires: yast2
+BuildRequires: yast2-add-on
+BuildRequires: yast2-audit-laf
+BuildRequires: yast2-auth-client
+BuildRequires: yast2-auth-server
+BuildRequires: yast2-bootloader
+BuildRequires: yast2-ca-management
+BuildRequires: yast2-country
+BuildRequires: yast2-dhcp-server
+BuildRequires: yast2-dns-server
+BuildRequires: yast2-firewall
+BuildRequires: yast2-firstboot
+BuildRequires: yast2-ftp-server
+BuildRequires: yast2-http-server
+BuildRequires: yast2-inetd
+BuildRequires: yast2-installation
+BuildRequires: yast2-iscsi-client
+BuildRequires: yast2-kdump
+BuildRequires: yast2-mail
+BuildRequires: yast2-network
+BuildRequires: yast2-nfs-client
+BuildRequires: yast2-nfs-server
+BuildRequires: yast2-nis-client
+BuildRequires: yast2-nis-server
+BuildRequires: yast2-ntp-client
+BuildRequires: yast2-online-update-configuration
+BuildRequires: yast2-printer
+BuildRequires: yast2-proxy
+# Available on SLE (12) only, needs to be adjusted for next SLE
+%if 0%{?suse_version} == 1315
+BuildRequires: yast2-registration
+%endif
+# Package available for S390 only
+%ifarch s390 s390x
+BuildRequires: yast2-s390
+%endif
+BuildRequires: yast2-samba-client
+BuildRequires: yast2-samba-server
+BuildRequires: yast2-security
+BuildRequires: yast2-services-manager
+BuildRequires: yast2-sound
+BuildRequires: yast2-squid
+BuildRequires: yast2-sysconfig
+BuildRequires: yast2-users
 
 
-# yast2-core omited from some reason in buildservice, adding explicitly
-BuildRequires:  yast2-core
-#!BuildIgnore: yast2-build-test yast2-online-update
+#!BuildIgnore: yast2-build-test
 
 # optimization suggested by AJ:
 #!BuildIgnore: tomcat5
@@ -47,20 +92,12 @@ BuildRequires:  yast2-core
 # Hotfix to build a package, bnc #427684
 #!BuildIgnore: xerces-j2-bootstrap libusb-0_1-4 crimson
 
-# Just a S390 thingie
-#!BuildIgnore: yast2-reipl
-
 # To speedup && to easily recover from dependency hell
-#!BuildIgnore: yast2-pkg-bindings-devel-doc yast2-pkg-bindings zypper libzypp yast2-gtk yast2-qt yast2-ncurses yast2-qt-pkg yast2-ncurses-pkg
+#!BuildIgnore: yast2-pkg-bindings zypper libzypp yast2-gtk yast2-qt yast2-ncurses yast2-qt-pkg yast2-ncurses-pkg
 
 # Yast packages without AutoYast support
-#!BuildIgnore: yast2-add-on-creator yast2-country-data yast2-firstboot yast2-live-installer yast2-product-creator yast2-trans-allpacks
+#!BuildIgnore: yast2-country-data
 #!BuildIgnore: yast2-control-center yast2-control-center-gnome yast2-control-center-qt
-
-# Doc packages
-# !BuildIgnore: yast2-devel-doc yast2-inetd-doc yast2-installation-devel-doc yast2-network-devel-doc yast2-nis-server-devel-doc yast2-printer-devel-doc
-
-BuildArchitectures:	noarch
 
 Summary:	YaST2 - AutoYaST Schema
 

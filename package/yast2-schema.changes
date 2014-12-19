@@ -1,4 +1,11 @@
 -------------------------------------------------------------------
+Fri Dec 19 14:30:21 CET 2014 - locilka@suse.com
+
+- Replacing dropped yast2-all-packages with list of packages
+  that contain RNG files needed for AutoYaST
+- 3.1.2
+
+-------------------------------------------------------------------
 Wed Dec 10 15:16:35 CET 2014 - locilka@suse.com
 
 - Ignoring more packages that do not contain any AutoYaST support

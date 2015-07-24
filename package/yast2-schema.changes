@@ -1,4 +1,10 @@
 -------------------------------------------------------------------
+Fri Jul 24 11:14:11 CEST 2015 - locilka@suse.com
+
+- BuildService requires an ID for package submission (bsc#939346)
+- 3.1.3
+
+-------------------------------------------------------------------
 Fri Dec 19 14:30:21 CET 2014 - locilka@suse.com
 
 - Replacing dropped yast2-all-packages with list of packages

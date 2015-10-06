@@ -1,4 +1,10 @@
 -------------------------------------------------------------------
+Tue Oct  6 12:42:03 CEST 2015 - schubi@suse.de
+
+- Using %is_opensuse in the spec file. (bnc#948563)
+- 3.1.4
+
+-------------------------------------------------------------------
 Fri Jul 24 11:14:11 CEST 2015 - locilka@suse.com
 
 - BuildService requires an ID for package submission (bsc#939346)

@@ -17,7 +17,7 @@
 
 
 Name:           yast2-schema
-Version:        3.1.3
+Version:        3.1.4
 Release:        0
 
 BuildRoot:      %{_tmppath}/%{name}-%{version}-build
@@ -62,8 +62,8 @@ BuildRequires: yast2-ntp-client
 BuildRequires: yast2-online-update-configuration
 BuildRequires: yast2-printer
 BuildRequires: yast2-proxy
-# Available on SLE (12) only, needs to be adjusted for next SLE
-%if 0%{?suse_version} == 1315
+# Available on SLE (12) only
+%if !%is_opensuse
 BuildRequires: yast2-registration
 %endif
 # Package available for S390 only

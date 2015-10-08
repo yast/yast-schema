@@ -1,4 +1,11 @@
 -------------------------------------------------------------------
+Thu Oct  8 15:54:16 CEST 2015 - schubi@suse.de
+
+- Set default value if %is_opensuse has not been set.
+  Additional fix for bnc#948563.
+- 3.1.5
+
+-------------------------------------------------------------------
 Tue Oct  6 12:42:03 CEST 2015 - schubi@suse.de
 
 - Using %is_opensuse in the spec file. (bnc#948563)

@@ -17,7 +17,7 @@
 
 
 Name:           yast2-schema
-Version:        3.1.4
+Version:        3.1.5
 Release:        0
 
 BuildRoot:      %{_tmppath}/%{name}-%{version}-build
@@ -63,7 +63,7 @@ BuildRequires: yast2-online-update-configuration
 BuildRequires: yast2-printer
 BuildRequires: yast2-proxy
 # Available on SLE (12) only
-%if !%is_opensuse
+%if !0%{?is_opensuse}
 BuildRequires: yast2-registration
 %endif
 # Package available for S390 only

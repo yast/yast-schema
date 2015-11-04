@@ -42,9 +42,10 @@ for desktop in `find $DESKTOP_DIR $DESKTOP_DIR2 -name '*.desktop'`; do
     # HACK: avoid creating a separate desktop file
     # for user_defaults (#215249#c7) and login_settings
     if [ "$resource" = "users" ]; then
-	resource="user_defaults? & login_settings? & groups? & users"
+	resource="user_defaults? & groups? & login_settings? & users"
     fi
 
+    echo $resource
     if [ ! -z "${X_SuSE_YaST_AutoInstSchema}" ]; then
 
         cp  $SCHEMA_DIR/${X_SuSE_YaST_AutoInstSchema} $RNC_OUTPUT

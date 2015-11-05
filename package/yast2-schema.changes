@@ -1,4 +1,10 @@
 -------------------------------------------------------------------
+Tue Nov  3 14:01:18 UTC 2015 - igonzalezsosa@suse.com
+
+- Add login_settings section to AutoYaST profile (bsc#805275)
+- 2.17.6
+
+-------------------------------------------------------------------
 Thu Dec 22 12:10:51 UTC 2011 - jsrain@suse.cz
 
 - made independent on yast2-all-packages (bnc#712052)

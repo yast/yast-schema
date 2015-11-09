@@ -16,8 +16,8 @@ BuildRequires:       yast2-audit-laf >= 2.17.11
 BuildRequires:       yast2-bootloader >= 2.17.99
 BuildRequires:       yast2-kdump >= 2.17.28
 BuildRequires:       yast2-ldap-client >= 2.17.39
-BuildRequires:       yast2-network >= 2.17.199.4
-BuildRequires:       yast2-ntp-client >= 2.17.15.1
+BuildRequires:       yast2-network >= 2.17.210
+BuildRequires:       yast2-ntp-client >= 2.17.18
 BuildRequires:       yast2-printer >= 2.17.64
 BuildRequires:       yast2-users >= 2.17.56
 

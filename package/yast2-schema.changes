@@ -1,4 +1,10 @@
 -------------------------------------------------------------------
+Mon Nov  9 16:04:00 UTC 2015 - igonzalezsosa@suse.com
+
+- Add BuildRequires versions to spec file (bsc#805275)
+- 2.17.7
+
+-------------------------------------------------------------------
 Tue Nov  3 14:01:18 UTC 2015 - igonzalezsosa@suse.com
 
 - Add login_settings section to AutoYaST profile (bsc#805275)

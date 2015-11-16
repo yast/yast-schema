@@ -35,6 +35,12 @@ BuildRequires:	yast2-online-update-configuration
 
 # yast2-core omited from some reason in buildservice, adding explicitly
 BuildRequires:  yast2-core
+
+# openSUSE does not contain the registration module
+%if %suse_version == 1315
+BuildRequires:  yast2-registration
+%endif
+
 #!BuildIgnore: yast2-build-test yast2-online-update
 
 # optimization suggested by AJ:

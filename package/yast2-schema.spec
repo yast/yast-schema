@@ -17,7 +17,7 @@
 
 
 Name:           yast2-schema
-Version:        3.1.0.1
+Version:        3.1.0.2
 Release:        0
 
 BuildRoot:      %{_tmppath}/%{name}-%{version}-build
@@ -35,6 +35,12 @@ BuildRequires:	yast2-online-update-configuration
 
 # yast2-core omited from some reason in buildservice, adding explicitly
 BuildRequires:  yast2-core
+
+# openSUSE does not contain the registration module
+%if !0%{?is_opensuse}
+BuildRequires:  yast2-registration
+%endif
+
 #!BuildIgnore: yast2-build-test yast2-online-update
 
 # optimization suggested by AJ:

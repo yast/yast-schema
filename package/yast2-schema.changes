@@ -1,4 +1,10 @@
 -------------------------------------------------------------------
+Fri Nov 13 11:40:46 UTC 2015 - igonzalezsosa@suse.com
+
+- Fix validation of AutoYaST schema (bsc#954412)
+- 3.1.0.2
+
+-------------------------------------------------------------------
 Wed Dec 10 15:16:35 CET 2014 - locilka@suse.com
 
 - Ignoring more packages that do not contain any AutoYaST support

@@ -37,7 +37,7 @@ BuildRequires:	yast2-online-update-configuration
 BuildRequires:  yast2-core
 
 # openSUSE does not contain the registration module
-%if %suse_version == 1315
+%if !0%{?is_opensuse}
 BuildRequires:  yast2-registration
 %endif
 

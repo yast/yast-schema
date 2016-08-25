@@ -1,4 +1,11 @@
 -------------------------------------------------------------------
+Thu Aug 25 14:51:31 UTC 2016 - igonzalezsosa@suse.com
+
+- Exclude i586 and s390 architectures as SLE 12 does not build
+  a runnable kernel for such architectures (bsc#933411).
+- 3.1.8
+
+-------------------------------------------------------------------
 Mon Jun  6 11:08:20 UTC 2016 - igonzalezsosa@suse.com
 
 - Add ssh_import section (fate#319624)

@@ -28,6 +28,12 @@ License:        GPL-2.0+
 
 Url:            https://github.com/yast/yast-schema
 
+# XXX: SLE-12 build packages for x86 and s390, but no runnable kernel, so
+# this package cannot be build here. Remove when SLE stop doing it
+%if !0%{?is_opensuse}
+ExcludeArch:    %ix86 s390
+%endif
+
 # Dependencies needed to build the package
 BuildRequires:	trang yast2-devtools yast2-testsuite
 

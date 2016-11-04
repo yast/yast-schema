@@ -5,7 +5,8 @@ Fri Nov  4 10:12:24 UTC 2016 - igonzalezsosa@suse.com
   (FATE#320342)
 - Add support to omit the Btrfs default subvolume name
   (FATE#317775)
-- 3.1.8.1
+- Add support to define SSH authorized_keys (FATE#319471)
+- 3.2.0
 
 -------------------------------------------------------------------
 Thu Aug 25 14:51:31 UTC 2016 - igonzalezsosa@suse.com

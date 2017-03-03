@@ -29,5 +29,6 @@ RUN zypper --gpg-auto-import-keys --non-interactive in --no-recommends \
   yast2-ntp-client \
   yast2-online-update-configuration \
   yast2-printer \
-  yast2-proxy
+  yast2-proxy \
+  && zypper clean -a
 COPY . /usr/src/app

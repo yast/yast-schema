@@ -18,6 +18,7 @@ RUN zypper --gpg-auto-import-keys --non-interactive in --no-recommends \
   yast2-http-server \
   yast2-inetd \
   yast2-installation \
+  yast2-installation-control \
   yast2-iscsi-client \
   yast2-kdump \
   yast2-mail \

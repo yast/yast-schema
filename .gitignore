@@ -13,6 +13,7 @@ config.sub
 configure
 configure.ac
 depcomp
+doc/
 install-sh
 *.pot
 libtool
@@ -20,10 +21,17 @@ ltconfig
 ltmain.sh
 missing
 mkinstalldirs
-stamp-h*
 Makefile.am.common
+stamp-h*
+src/rnc/*.rnc
+src/rng/*.rng
+tmp.*
+testsuite/config
+testsuite/run
+testsuite/site.exp
+testsuite/yast2-schema.*
 *.ami
 *.bz2
 .dep
-tmp.*
 *.log
+.yardoc/

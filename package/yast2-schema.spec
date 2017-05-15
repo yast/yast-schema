@@ -17,7 +17,7 @@
 
 
 Name:           yast2-schema
-Version:        3.2.0
+Version:        3.3.0
 Release:        0
 
 BuildRoot:      %{_tmppath}/%{name}-%{version}-build
@@ -56,6 +56,7 @@ BuildRequires: yast2-ftp-server
 BuildRequires: yast2-http-server
 BuildRequires: yast2-inetd
 BuildRequires: yast2-installation
+BuildRequires: yast2-installation-control
 BuildRequires: yast2-iscsi-client
 BuildRequires: yast2-kdump
 BuildRequires: yast2-mail

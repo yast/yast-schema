@@ -3,6 +3,8 @@ Mon May 15 10:51:42 UTC 2017 - igonzalezsosa@suse.com
 
 - Add support to use partitioning elements from control file
   in an AutoYaST profile
+- First storage-ng version: yast2-add-on and yast2-kdump support
+  is temporarily removed
 - 3.3.0
 
 -------------------------------------------------------------------

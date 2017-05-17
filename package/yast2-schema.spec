@@ -59,7 +59,7 @@ BuildRequires: yast2-inetd
 BuildRequires: yast2-installation
 # yast2-installation-control contains a file with partitioning_elements that are reused
 # by AutoYaST.
-BuildRequires: yast2-installation-control
+BuildRequires: yast2-installation-control >= 3.3.0
 BuildRequires: yast2-iscsi-client
 # FIXME: storage-ng. To be enabled again when yast2-kdump is adapted to yast2-storage-ng.
 # BuildRequires: yast2-kdump

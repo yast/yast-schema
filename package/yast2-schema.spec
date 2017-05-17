@@ -41,7 +41,7 @@ BuildRequires:	trang yast2-devtools yast2-testsuite
 # in /usr/share/YaST2/schema/autoyast/rng/*.rng
 BuildRequires: autoyast2
 BuildRequires: yast2
-# FIXME: storage-ng
+# FIXME: storage-ng. To be enabled again when yast2-add-on is adapted to yast2-storage-ng.
 # BuildRequires: yast2-add-on
 BuildRequires: yast2-audit-laf
 BuildRequires: yast2-auth-client
@@ -57,9 +57,11 @@ BuildRequires: yast2-ftp-server
 BuildRequires: yast2-http-server
 BuildRequires: yast2-inetd
 BuildRequires: yast2-installation
+# yast2-installation-control contains a file with partitioning_elements that are reused
+# by AutoYaST.
 BuildRequires: yast2-installation-control
 BuildRequires: yast2-iscsi-client
-# FIXME: storage-ng
+# FIXME: storage-ng. To be enabled again when yast2-kdump is adapted to yast2-storage-ng.
 # BuildRequires: yast2-kdump
 BuildRequires: yast2-mail
 BuildRequires: yast2-network

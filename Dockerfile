@@ -1,9 +1,8 @@
-FROM yastdevel/ruby
+FROM yastdevel/storage-ng
 RUN zypper --gpg-auto-import-keys --non-interactive in --no-recommends \
   autoyast2 \
   trang \
   yast2 \
-  yast2-add-on \
   yast2-audit-laf \
   yast2-auth-client \
   yast2-auth-server \
@@ -18,8 +17,8 @@ RUN zypper --gpg-auto-import-keys --non-interactive in --no-recommends \
   yast2-http-server \
   yast2-inetd \
   yast2-installation \
+  yast2-installation-control \
   yast2-iscsi-client \
-  yast2-kdump \
   yast2-mail \
   yast2-network \
   yast2-nfs-client \

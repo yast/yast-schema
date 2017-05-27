@@ -1,4 +1,13 @@
 -------------------------------------------------------------------
+Mon May 15 10:51:42 UTC 2017 - igonzalezsosa@suse.com
+
+- Add support to use partitioning elements from control file
+  in an AutoYaST profile (bsc#1039481)
+- First storage-ng version: yast2-add-on and yast2-kdump support
+  is temporarily removed
+- 3.3.0
+
+-------------------------------------------------------------------
 Fri Nov  4 10:12:24 UTC 2016 - igonzalezsosa@suse.com
 
 - Add support to enable copy-on-write for Btrfs subvolumes

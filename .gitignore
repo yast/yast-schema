@@ -28,3 +28,12 @@ Makefile.am.common
 tmp.*
 *.log
 /.yardoc
+/doc/autodocs
+*.rnc
+*.rng
+testsuite/config
+testsuite/run/runtest.sh
+testsuite/site.exp
+testsuite/yast2-schema.sum
+testsuite/yast2-schema.test/testsuite.exp
+

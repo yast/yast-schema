@@ -29,6 +29,7 @@ tmp.*
 *.log
 /.yardoc
 /doc/autodocs
+/doc/*.html
 *.rnc
 *.rng
 testsuite/config

@@ -1,4 +1,13 @@
 -------------------------------------------------------------------
+Fri Nov  4 10:12:24 UTC 2016 - igonzalezsosa@suse.com
+
+- Add support to enable copy-on-write for Btrfs subvolumes
+  (FATE#320342)
+- Add support to omit the Btrfs default subvolume name
+  (FATE#317775)
+- 3.1.8.1
+
+-------------------------------------------------------------------
 Thu Aug 25 14:51:31 UTC 2016 - igonzalezsosa@suse.com
 
 - Exclude i586 and s390 architectures as SLE 12 does not build

@@ -1,4 +1,10 @@
 -------------------------------------------------------------------
+Mon Feb 12 11:14:14 UTC 2018 - jreidinger@suse.com
+
+- drop yast2-ca-management (fate#319119)
+- 4.0.1
+
+-------------------------------------------------------------------
 Fri Feb  9 14:42:12 UTC 2018 - knut.anderssen@suse.com
 
 - Drop yast2-inetd (fate#323373)

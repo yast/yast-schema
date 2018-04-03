@@ -1,4 +1,10 @@
 -------------------------------------------------------------------
+Tue Apr  3 08:55:13 UTC 2018 - igonzalezsosa@suse.com
+
+- Fix several validation problems (bsc#1013047)
+- 4.0.2
+
+-------------------------------------------------------------------
 Mon Feb 12 11:14:14 UTC 2018 - jreidinger@suse.com
 
 - drop yast2-ca-management (fate#319119)

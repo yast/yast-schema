@@ -8,7 +8,6 @@ RUN zypper --gpg-auto-import-keys --non-interactive in --no-recommends \
   yast2-auth-client \
   yast2-auth-server \
   yast2-bootloader \
-  yast2-ca-management \
   yast2-country \
   yast2-dhcp-server \
   yast2-dns-server \

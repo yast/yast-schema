@@ -1,4 +1,10 @@
 -------------------------------------------------------------------
+Wed May 23 06:49:24 UTC 2018 - igonzalezsosa@suse.com
+
+- Add create_subvolumes element (bsc#1094307)
+- 4.0.3
+
+-------------------------------------------------------------------
 Tue Apr  3 08:55:13 UTC 2018 - igonzalezsosa@suse.com
 
 - Fix several validation problems (bsc#1013047)

@@ -1,4 +1,9 @@
 -------------------------------------------------------------------
+Wed Aug 22 16:28:36 CEST 2018 - schubi@suse.de
+
+- Switched license in spec file from SPDX2 to SPDX3 format. 
+
+-------------------------------------------------------------------
 Wed May 23 06:49:24 UTC 2018 - igonzalezsosa@suse.com
 
 - Add create_subvolumes element (bsc#1094307)

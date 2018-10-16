@@ -126,4 +126,4 @@ AutoYaST Syntax Schema
 %dir %{yast_schemadir}/autoyast/rng
 %{yast_schemadir}/autoyast/rng/*.rng
 %doc %{yast_docdir} 
-
+%license COPYING

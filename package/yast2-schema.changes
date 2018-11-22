@@ -1,4 +1,12 @@
 -------------------------------------------------------------------
+Thu Nov 22 16:35:28 CET 2018 - schubi@suse.de
+
+- AutoYaST schema changed in yast2-firewall (4.0.28).
+  - Allowed the new 'description', 'short' and 'target' elements in
+    zone entries (bsc#1108199)
+- 4.0.4
+
+-------------------------------------------------------------------
 Tue Oct 16 16:45:18 CEST 2018 - schubi@suse.de
 
 - Added license file to spec.

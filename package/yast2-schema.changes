@@ -1,4 +1,11 @@
 -------------------------------------------------------------------
+Thu Nov 29 14:23:19 CET 2018 - schubi@suse.de
+
+- yast2-firstboot change: Added firstboot.rnc file to desktop file.
+  (bsc#1117068)
+- 4.0.5
+
+-------------------------------------------------------------------
 Thu Nov 22 16:35:28 CET 2018 - schubi@suse.de
 
 - AutoYaST schema changed in yast2-firewall (4.0.28).

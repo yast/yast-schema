@@ -3,7 +3,6 @@
 # Martin Vidner <mvidner@suse.cz>
 # collect RNC files, create a schema in cwd
 #
-set -o errexit
 
 : ${PREFIX:=/usr}
 SCHEMA_DIR="$PREFIX/share/YaST2/schema/autoyast/rnc"
@@ -31,6 +30,8 @@ for desktop in `find $DESKTOP_DIR $DESKTOP_DIR2 -name '*.desktop' | LC_ALL=C sor
     unset X_SuSE_YaST_AutoInstPath
     unset X_SuSE_YaST_AutoInstOptional
 
+    package_name=`/bin/rpm -qf $desktop --qf %{NAME}`
+
     eval $(grep "^X-SuSE-YaST-AutoInst" $desktop | sed -e 's/X-SuSE-YaST-/X_SuSE_YaST_/' )
 
     if [ -z "$X_SuSE_YaST_AutoInstResource" ]; then
@@ -49,14 +50,14 @@ for desktop in `find $DESKTOP_DIR $DESKTOP_DIR2 -name '*.desktop' | LC_ALL=C sor
     if [ "$resource" = "general" ]; then
         resource="general? & pxe"
         cp  $SCHEMA_DIR/pxe.rnc $RNC_OUTPUT
-        echo "include 'pxe.rnc'" >> $RNC_OUTPUT/includes.rnc
+        echo "include 'pxe.rnc' # autoyast2" >> $RNC_OUTPUT/includes.rnc
     fi
 
     if [ ! -z "${X_SuSE_YaST_AutoInstSchema}" ]; then
 
         cp  $SCHEMA_DIR/${X_SuSE_YaST_AutoInstSchema} $RNC_OUTPUT
         
-        echo "include '${X_SuSE_YaST_AutoInstSchema}'" >> $RNC_OUTPUT/includes.rnc
+        echo "include '${X_SuSE_YaST_AutoInstSchema}' # $package_name" >> $RNC_OUTPUT/includes.rnc
 
         if [ -z "$X_SuSE_YaST_AutoInstOptional" -o "$X_SuSE_YaST_AutoInstOptional" = "true" ]; then
 	    optional="?"

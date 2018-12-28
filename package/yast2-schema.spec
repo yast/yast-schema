@@ -17,7 +17,7 @@
 
 
 Name:           yast2-schema
-Version:        4.0.6
+Version:        4.0.7
 Release:        0
 
 BuildRoot:      %{_tmppath}/%{name}-%{version}-build
@@ -52,6 +52,8 @@ BuildRequires: yast2-dns-server
 BuildRequires: yast2-firewall >= 4.0.28
 BuildRequires: yast2-firstboot >= 4.1.1
 BuildRequires: yast2-ftp-server
+# initial
+BuildRequires: yast2-tftp-server >= 4.1.6
 BuildRequires: yast2-http-server
 BuildRequires: yast2-installation
 BuildRequires: yast2-iscsi-client

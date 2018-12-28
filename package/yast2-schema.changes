@@ -1,4 +1,10 @@
 -------------------------------------------------------------------
+Fri Dec 28 15:02:56 CET 2018 - schubi@suse.de
+
+- Added initial yast2-tftp-server (bsc1108199).
+- 4.0.7
+
+-------------------------------------------------------------------
 Fri Nov 30 09:20:40 CET 2018 - schubi@suse.de
 
 - Evaluating which package belongs to which schema. This

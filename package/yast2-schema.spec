@@ -49,7 +49,7 @@ BuildRequires: yast2-bootloader
 BuildRequires: yast2-country
 BuildRequires: yast2-dhcp-server
 BuildRequires: yast2-dns-server
-BuildRequires: yast2-firewall >= 4.1.4
+BuildRequires: yast2-firewall >= 4.1.8
 BuildRequires: yast2-firstboot >= 4.1.1
 BuildRequires: yast2-ftp-server
 # initial

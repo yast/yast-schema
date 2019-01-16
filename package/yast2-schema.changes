@@ -2,7 +2,7 @@
 Wed Jan 16 13:22:52 UTC 2019 - jreidinger@suse.com
 
 - AutoYaST schema changed in yast2-firewall (4.1.8).
-  - Dropped unused elements that was not in GA and is not needed in
+  - Dropped unused elements that were not in GA and are not needed in
     SP1
 - 4.1.1
 

@@ -17,7 +17,7 @@
 
 
 Name:           yast2-schema
-Version:        4.1.1
+Version:        4.1.2
 Release:        0
 
 BuildRoot:      %{_tmppath}/%{name}-%{version}-build
@@ -47,6 +47,7 @@ BuildRequires: yast2-auth-client
 BuildRequires: yast2-auth-server
 BuildRequires: yast2-bootloader
 BuildRequires: yast2-country
+BuildRequires: yast2-configuration-management >= 4.1.2
 BuildRequires: yast2-dhcp-server
 BuildRequires: yast2-dns-server
 BuildRequires: yast2-firewall >= 4.1.8

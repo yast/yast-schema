@@ -15,6 +15,7 @@ RUN zypper --gpg-auto-import-keys --non-interactive in --no-recommends \
   yast2-firstboot \
   yast2-ftp-server \
   yast2-http-server \
+  yast2-tftp-server \
   yast2-installation \
   yast2-iscsi-client \
   yast2-kdump \

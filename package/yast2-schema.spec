@@ -53,8 +53,7 @@ BuildRequires: yast2-dns-server
 BuildRequires: yast2-firewall >= 4.1.8
 BuildRequires: yast2-firstboot >= 4.1.1
 BuildRequires: yast2-ftp-server
-# initial
-BuildRequires: yast2-tftp-server >= 4.1.6
+BuildRequires: yast2-tftp-server >= 4.1.7
 BuildRequires: yast2-http-server
 BuildRequires: yast2-installation
 BuildRequires: yast2-iscsi-client

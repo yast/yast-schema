@@ -85,7 +85,7 @@ BuildRequires: yast2-sound
 BuildRequires: yast2-squid
 BuildRequires: yast2-sysconfig
 # tag home_btrfs_subvolume
-BuildRequires: yast2-users >=4.1.11
+BuildRequires: yast2-users >= 4.1.11
 
 
 #!BuildIgnore: yast2-build-test

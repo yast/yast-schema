@@ -17,7 +17,7 @@
 
 
 Name:           yast2-schema
-Version:        4.1.3
+Version:        4.1.4
 Release:        0
 
 BuildRoot:      %{_tmppath}/%{name}-%{version}-build
@@ -45,7 +45,8 @@ BuildRequires: yast2-add-on
 BuildRequires: yast2-audit-laf
 BuildRequires: yast2-auth-client
 BuildRequires: yast2-auth-server
-BuildRequires: yast2-bootloader
+# tag smt
+BuildRequires: yast2-bootloader >= 4.1.22
 BuildRequires: yast2-country
 BuildRequires: yast2-configuration-management >= 4.1.2
 BuildRequires: yast2-dhcp-server
@@ -83,7 +84,8 @@ BuildRequires: yast2-services-manager
 BuildRequires: yast2-sound
 BuildRequires: yast2-squid
 BuildRequires: yast2-sysconfig
-BuildRequires: yast2-users
+# tag home_btrfs_subvolume
+BuildRequires: yast2-users >=4.1.11
 
 
 #!BuildIgnore: yast2-build-test

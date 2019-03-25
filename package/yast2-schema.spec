@@ -46,7 +46,7 @@ BuildRequires: yast2-audit-laf
 BuildRequires: yast2-auth-client
 BuildRequires: yast2-auth-server
 # tag smt
-BuildRequires: yast2-bootloader >= 4.1.22
+BuildRequires: yast2-bootloader >= 4.1.23
 BuildRequires: yast2-country
 BuildRequires: yast2-configuration-management >= 4.1.2
 BuildRequires: yast2-dhcp-server

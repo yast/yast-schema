@@ -1,4 +1,11 @@
 -------------------------------------------------------------------
+Tue May 21 16:11:42 CEST 2019 - schubi@suse.de
+
+- Updated build requ. due tag cpu_mitigations in bootloader.
+  (bsc#1128707) (wrong version number)
+- 4.1.8
+
+-------------------------------------------------------------------
 Tue May  7 09:17:36 CEST 2019 - schubi@suse.de
 
 - Updated build requ. due tag cpu_mitigations in bootloader.

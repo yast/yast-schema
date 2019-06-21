@@ -1,4 +1,11 @@
 -------------------------------------------------------------------
+Fri Jun 21 05:47:58 UTC 2019 - Josef Reidinger <jreidinger@suse.com>
+
+- Backport: Updated build requ. due tag cpu_mitigations in
+  bootloader. (bsc#1128707)
+- 3.3.0
+
+-------------------------------------------------------------------
 Fri Nov  4 10:12:24 UTC 2016 - igonzalezsosa@suse.com
 
 - Add support to enable copy-on-write for Btrfs subvolumes

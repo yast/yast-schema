@@ -1,4 +1,13 @@
 -------------------------------------------------------------------
+Fri Aug  2 15:38:09 UTC 2019 - Imobach Gonzalez Sosa <igonzalezsosa@suse.com>
+
+- Update autoyast2 and yast2-add-on dependencies to:
+  - Support the new add_on_others section
+  - Add the missing 'uuid' element in the 'partition' sections
+- Fixes bsc#1144007.
+- 4.2.1
+
+-------------------------------------------------------------------
 Tue May 21 16:11:42 CEST 2019 - schubi@suse.de
 
 - Updated build requ. due tag cpu_mitigations in bootloader.

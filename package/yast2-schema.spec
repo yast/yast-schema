@@ -39,9 +39,11 @@ BuildRequires:	trang yast2-devtools yast2-testsuite
 
 # All packages providing RNG files for AutoYaST
 # in /usr/share/YaST2/schema/autoyast/rng/*.rng
-BuildRequires: autoyast2 >= 4.1.3
+# uuid section in 'partition' sections
+BuildRequires: autoyast2 >= 4.2.6
 BuildRequires: yast2
-BuildRequires: yast2-add-on
+# add_on_others element
+BuildRequires: yast2-add-on >= 4.2.4
 BuildRequires: yast2-audit-laf
 BuildRequires: yast2-auth-client
 BuildRequires: yast2-auth-server

@@ -35,7 +35,8 @@ for desktop in `find $DESKTOP_DIR $DESKTOP_DIR2 -name '*.desktop' | LC_ALL=C sor
     eval $(grep "^X-SuSE-YaST-AutoInst" $desktop | sed -e 's/X-SuSE-YaST-/X_SuSE_YaST_/' )
 
     if [ -z "$X_SuSE_YaST_AutoInstResource" ]; then
-        resource="FLAG__X_SuSE_YaST_AutoInstResource__not_set__in_$desktop"
+	resource=`basename $desktop .desktop`
+        resource="FLAG__X_SuSE_YaST_AutoInstResource__not_set__in_$resource"
     else
         resource=$X_SuSE_YaST_AutoInstResource
     fi

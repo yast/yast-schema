@@ -32,10 +32,18 @@ for desktop in `find $DESKTOP_DIR $DESKTOP_DIR2 -name '*.desktop' | LC_ALL=C sor
 
     package_name=`/bin/rpm -qf $desktop --qf %{NAME}`
 
-    eval $(grep "^X-SuSE-YaST-AutoInst" $desktop | sed -e 's/X-SuSE-YaST-/X_SuSE_YaST_/' )
+    X_SuSE_YaST_AutoInstSchema=`grep "^X-SuSE-YaST-AutoInstSchema" $desktop`
+    X_SuSE_YaST_AutoInstSchema=${X_SuSE_YaST_AutoInstSchema##*=}
+    X_SuSE_YaST_AutoInstResource=`grep "^X-SuSE-YaST-AutoInstResource" $desktop`
+    X_SuSE_YaST_AutoInstResource=${X_SuSE_YaST_AutoInstResource##*=}
+    X_SuSE_YaST_AutoInstPath=`grep "^X-SuSE-YaST-AutoInstPath" $desktop`
+    X_SuSE_YaST_AutoInstPath=${X_SuSE_YaST_AutoInstPath##*=}
+    X_SuSE_YaST_AutoInstOptional=`grep "^X-SuSE-YaST-AutoInstOptional" $desktop`
+    X_SuSE_YaST_AutoInstOptional=${X_SuSE_YaST_AutoInstOptional##*=}
 
     if [ -z "$X_SuSE_YaST_AutoInstResource" ]; then
-        resource=`basename $desktop .desktop`
+	resource=`basename $desktop .desktop`
+        resource="FLAG__X_SuSE_YaST_AutoInstResource__not_set__in_$resource"
     else
         resource=$X_SuSE_YaST_AutoInstResource
     fi

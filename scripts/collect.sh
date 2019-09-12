@@ -34,7 +34,7 @@ for desktop in `find $DESKTOP_DIR $DESKTOP_DIR2 -name '*.desktop' | LC_ALL=C sor
 
     X_SuSE_YaST_AutoInstSchema=`grep "^X-SuSE-YaST-AutoInstSchema" $desktop`
     X_SuSE_YaST_AutoInstSchema=${X_SuSE_YaST_AutoInstSchema##*=}
-    X_SuSE_YaST_AutoInstResource=`grep "^X-SuSE-YaST-AutoInstResource" $desktop`
+    X_SuSE_YaST_AutoInstResource=`grep "^X-SuSE-YaST-AutoInstResource=" $desktop` # do not take AutoInstResourceAliases
     X_SuSE_YaST_AutoInstResource=${X_SuSE_YaST_AutoInstResource##*=}
     X_SuSE_YaST_AutoInstPath=`grep "^X-SuSE-YaST-AutoInstPath" $desktop`
     X_SuSE_YaST_AutoInstPath=${X_SuSE_YaST_AutoInstPath##*=}

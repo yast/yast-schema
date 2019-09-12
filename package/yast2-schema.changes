@@ -2,7 +2,7 @@
 Thu Sep 12 10:08:49 CEST 2019 - schubi@suse.de
 
 - Ignoring X-SuSE-YaST-AutoInstResourceAliases entries in desktop
-  files while evaluating resources.
+  files while evaluating resources (bsc#1144894).
 - 4.2.3
 
 -------------------------------------------------------------------

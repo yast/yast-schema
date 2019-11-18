@@ -17,7 +17,7 @@
 
 
 Name:           yast2-schema
-Version:        3.2.0
+Version:        3.2.1
 Release:        0
 
 BuildRoot:      %{_tmppath}/%{name}-%{version}-build
@@ -39,7 +39,7 @@ BuildRequires:	trang yast2-devtools yast2-testsuite
 
 # All packages providing RNG files for AutoYaST
 # in /usr/share/YaST2/schema/autoyast/rng/*.rng
-BuildRequires: autoyast2
+BuildRequires: autoyast2 >= 3.2.36.3
 BuildRequires: yast2
 BuildRequires: yast2-add-on
 BuildRequires: yast2-audit-laf
@@ -51,7 +51,7 @@ BuildRequires: yast2-country
 BuildRequires: yast2-dhcp-server
 BuildRequires: yast2-dns-server
 BuildRequires: yast2-firewall
-BuildRequires: yast2-firstboot
+BuildRequires: yast2-firstboot >= 3.1.24
 BuildRequires: yast2-ftp-server
 BuildRequires: yast2-http-server
 BuildRequires: yast2-inetd

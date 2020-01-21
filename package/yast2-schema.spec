@@ -17,7 +17,7 @@
 
 
 Name:           yast2-schema
-Version:        4.1.7
+Version:        4.1.8
 Release:        0
 
 BuildRoot:      %{_tmppath}/%{name}-%{version}-build
@@ -39,7 +39,7 @@ BuildRequires:	trang yast2-devtools yast2-testsuite
 
 # All packages providing RNG files for AutoYaST
 # in /usr/share/YaST2/schema/autoyast/rng/*.rng
-BuildRequires: autoyast2 >= 4.1.3
+BuildRequires: autoyast2 >= 4.1.8
 BuildRequires: yast2
 BuildRequires: yast2-add-on
 BuildRequires: yast2-audit-laf

@@ -17,7 +17,7 @@
 
 
 Name:           yast2-schema
-Version:        4.2.7
+Version:        4.2.8
 Release:        0
 
 BuildRoot:      %{_tmppath}/%{name}-%{version}-build
@@ -40,8 +40,8 @@ BuildRequires:	trang yast2-devtools yast2-testsuite
 # All packages providing RNG files for AutoYaST
 # in /usr/share/YaST2/schema/autoyast/rng/*.rng
 
-# crypt_method element in 'partition' sections
-BuildRequires: autoyast2 >= 4.2.17
+# fixes for scripts elements
+BuildRequires: autoyast2 >= 4.2.25
 BuildRequires: yast2
 # add_on_others element
 BuildRequires: yast2-add-on >= 4.2.4

@@ -35,7 +35,7 @@ ExcludeArch:    %ix86 s390
 %endif
 
 # Dependencies needed to build the package
-BuildRequires:	trang yast2-devtools yast2-testsuite
+BuildRequires:	trang yast2-devtools
 
 # All packages providing RNG files for AutoYaST
 # in /usr/share/YaST2/schema/autoyast/rng/*.rng

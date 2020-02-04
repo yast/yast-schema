@@ -32,9 +32,4 @@ tmp.*
 /doc/*.html
 *.rnc
 *.rng
-testsuite/config
-testsuite/run/runtest.sh
-testsuite/site.exp
-testsuite/yast2-schema.sum
-testsuite/yast2-schema.test/testsuite.exp
 

@@ -17,7 +17,7 @@
 
 
 Name:           yast2-schema
-Version:        4.2.8
+Version:        4.2.9
 Release:        0
 
 BuildRoot:      %{_tmppath}/%{name}-%{version}-build
@@ -27,12 +27,6 @@ Group:	        System/YaST
 License:        GPL-2.0-or-later
 
 Url:            https://github.com/yast/yast-schema
-
-# XXX: SLE-12 build packages for x86 and s390, but no runnable kernel, so
-# this package cannot be build here. Remove when SLE stop doing it
-%if !0%{?is_opensuse}
-ExcludeArch:    %ix86 s390
-%endif
 
 # Dependencies needed to build the package
 BuildRequires:	trang yast2-devtools
@@ -72,10 +66,7 @@ BuildRequires: yast2-ntp-client
 BuildRequires: yast2-online-update-configuration
 BuildRequires: yast2-printer
 BuildRequires: yast2-proxy
-# Available on SLE (12) only
-%if !0%{?is_opensuse}
 BuildRequires: yast2-registration
-%endif
 # Package available for S390 only
 %ifarch s390 s390x
 BuildRequires: yast2-s390

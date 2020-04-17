@@ -1,7 +1,14 @@
 -------------------------------------------------------------------
+Fri Apr 17 12:02:29 UTC 2020 - Josef Reidinger <jreidinger@suse.com>
+
+- Exclude the registration for architectures on which it does not
+  build (related to the jsc#SLE-11852)
+- 4.2.10
+
+-------------------------------------------------------------------
 Thu Apr 16 15:05:59 UTC 2020 - Josef Reidinger <jreidinger@suse.com>
 
-- Always add to schema registration (jsc#SLE-11852)
+- Always add the registration to schema (jsc#SLE-11852)
 - do not use exclude arch on SLE
 - 4.2.9
 

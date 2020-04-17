@@ -66,7 +66,10 @@ BuildRequires: yast2-ntp-client
 BuildRequires: yast2-online-update-configuration
 BuildRequires: yast2-printer
 BuildRequires: yast2-proxy
+# registration is available only where suse connect is also available
+%ifnarch s390 %ix86
 BuildRequires: yast2-registration
+%endif
 # Package available for S390 only
 %ifarch s390 s390x
 BuildRequires: yast2-s390

@@ -2,6 +2,7 @@
 Thu May  7 16:13:37 UTC 2020 - Imobach Gonzalez Sosa <igonzalezsosa@suse.com>
 
 - Allow optional types for string and map objects (bsc#1170886).
+- Check schema correctness with jing and xmllint (bsc#1172131).
 - 4.3.0
 
 -------------------------------------------------------------------

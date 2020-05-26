@@ -30,6 +30,7 @@ Url:            https://github.com/yast/yast-schema
 
 # Dependencies needed to build the package
 BuildRequires:  jing
+BuildRequires:  libxml2-tools
 BuildRequires:	trang yast2-devtools
 
 # All packages providing RNG files for AutoYaST

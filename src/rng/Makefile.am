@@ -16,6 +16,11 @@ profile.rng: $(RNCS)
 clean-local:
 	rm -rf *.rng
 
+# Test with a minimal valid profile that the schema is correct
+check-local:
+	echo '<profile xmlns="http://www.suse.com/1.0/yast2ns"/>' | jing profile.rng /dev/stdin
+	echo '<profile xmlns="http://www.suse.com/1.0/yast2ns"/>' | xmllint --noout --relaxng profile.rng /dev/stdin
+
 install-data-local:
 	$(INSTALL) -d $(DESTDIR)$(schemadir)/autoyast/rng
 	$(INSTALL) -m 644 *.rng $(DESTDIR)$(schemadir)/autoyast/rng

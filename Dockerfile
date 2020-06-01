@@ -1,6 +1,8 @@
 FROM registry.opensuse.org/yast/head/containers/yast-ruby:latest
 RUN zypper --gpg-auto-import-keys --non-interactive in --no-recommends \
   autoyast2 \
+  libxml2-tools \
+  jing \
   trang \
   yast2 \
   yast2-add-on \

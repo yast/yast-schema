@@ -4,6 +4,11 @@
 RNCDIR=../rnc
 RNCS=$(wildcard $(RNCDIR)/*.rnc)
 
+# Decrease some JRE space to fit in limited memory on ci.opensuse.org
+# Prevents "Could not allocate metaspace: 1073741824 bytes"
+# https://rce-docs.hmdc.harvard.edu/faq/why-do-i-get-java-error-could-not-reserve-enough-space-object-heap
+export _JAVA_OPTIONS="-XX:CompressedClassSpaceSize=200M"
+
 all-local: profile.rng rules.rng classes-decl.rng
 profile.rng: $(RNCS)
 	trang -I rnc -O rng $(RNCDIR)/profile.rnc $@

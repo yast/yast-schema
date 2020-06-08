@@ -18,7 +18,8 @@ rm -f $RNC_OUTPUT/includes.rnc
 cp $COMMON $RNC_OUTPUT
 
 
-# initialize
+# Formerly the elements were sorted in these 2 categories but that
+# distinction is obsolete except in this script
 install=""
 configure=""
 

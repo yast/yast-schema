@@ -17,7 +17,7 @@
 
 
 Name:           yast2-schema
-Version:        4.3.1
+Version:        4.3.2
 Release:        0
 
 BuildRoot:      %{_tmppath}/%{name}-%{version}-build
@@ -60,7 +60,8 @@ BuildRequires: yast2-installation
 BuildRequires: yast2-iscsi-client
 BuildRequires: yast2-kdump
 BuildRequires: yast2-mail
-BuildRequires: yast2-network
+# setup_before_proposal element
+BuildRequires: yast2-network >= 4.3.10
 BuildRequires: yast2-nfs-client
 BuildRequires: yast2-nfs-server
 BuildRequires: yast2-nis-client

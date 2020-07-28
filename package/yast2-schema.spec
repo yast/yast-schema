@@ -39,8 +39,8 @@ BuildRequires:	trang yast2-devtools
 # make report elements and descendants optional
 BuildRequires: autoyast2 >= 4.3.20
 BuildRequires: yast2
-# add_on_others element
-BuildRequires: yast2-add-on >= 4.3.0
+# add_on_products and add_on_others types
+BuildRequires: yast2-add-on >= 4.3.3
 BuildRequires: yast2-audit-laf >= 4.3.0
 BuildRequires: yast2-auth-client >= 4.3.0
 BuildRequires: yast2-auth-server

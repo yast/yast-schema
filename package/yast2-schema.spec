@@ -17,7 +17,7 @@
 
 
 Name:           yast2-schema
-Version:        4.3.6
+Version:        4.3.7
 Release:        0
 
 BuildRoot:      %{_tmppath}/%{name}-%{version}-build
@@ -44,8 +44,8 @@ BuildRequires: yast2-add-on >= 4.3.3
 BuildRequires: yast2-audit-laf >= 4.3.0
 BuildRequires: yast2-auth-client >= 4.3.0
 BuildRequires: yast2-auth-server
-# tag secure_boot
-BuildRequires: yast2-bootloader >= 4.3.0
+# tag update_nvram
+BuildRequires: yast2-bootloader >= 4.3.10
 BuildRequires: yast2-country >= 4.3.0
 BuildRequires: yast2-configuration-management >= 4.3.0
 BuildRequires: yast2-dhcp-server >= 4.3.0

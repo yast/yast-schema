@@ -1,4 +1,10 @@
 -------------------------------------------------------------------
+Wed Sep 23 14:37:16 UTC 2020 - Josef Reidinger <jreidinger@suse.com>
+
+- add update_nvram element to the bootloader section (jsc#11500)
+- 4.3.7
+
+-------------------------------------------------------------------
 Wed Sep  2 15:14:28 UTC 2020 - Imobach Gonzalez Sosa <igonzalezsosa@suse.com>
 
 - Recognize installed_product and installed_product_version as

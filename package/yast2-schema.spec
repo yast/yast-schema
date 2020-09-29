@@ -34,8 +34,8 @@ BuildRequires:	trang yast2-devtools
 # All packages providing RNG files for AutoYaST
 # in /usr/share/YaST2/schema/autoyast/rng/*.rng
 
-# fixes for scripts elements
-BuildRequires: autoyast2 >= 4.2.25
+# drop 'mouse' element
+BuildRequires: autoyast2 >= 4.2.46
 BuildRequires: yast2
 # add_on_others element
 BuildRequires: yast2-add-on >= 4.2.4

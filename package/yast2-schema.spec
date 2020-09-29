@@ -42,8 +42,8 @@ BuildRequires: yast2-add-on >= 4.2.4
 BuildRequires: yast2-audit-laf
 BuildRequires: yast2-auth-client
 BuildRequires: yast2-auth-server
-# tag secure_boot
-BuildRequires: yast2-bootloader >= 4.2.11
+# drop 'suse_btrfs' element
+BuildRequires: yast2-bootloader >= 4.2.27
 BuildRequires: yast2-country
 BuildRequires: yast2-configuration-management >= 4.1.2
 BuildRequires: yast2-dhcp-server

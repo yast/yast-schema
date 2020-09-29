@@ -1,4 +1,10 @@
 -------------------------------------------------------------------
+Tue Sep 29 13:24:26 UTC 2020 - Imobach Gonzalez Sosa <igonzalezsosa@suse.com>
+
+- Drop the 'suse_btrfs' element from the schema (bsc#1176970).
+- 4.2.12
+
+-------------------------------------------------------------------
 Tue Sep 29 10:34:30 UTC 2020 - Imobach Gonzalez Sosa <igonzalezsosa@suse.com>
 
 - Drop the 'general/mouse' element from the schema (bsc#1176973).

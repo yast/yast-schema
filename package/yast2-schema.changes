@@ -1,4 +1,10 @@
 -------------------------------------------------------------------
+Tue Sep 29 10:34:30 UTC 2020 - Imobach Gonzalez Sosa <igonzalezsosa@suse.com>
+
+- Drop the 'general/mouse' element from the schema (bsc#1176973).
+- 4.3.9
+
+-------------------------------------------------------------------
 Thu Sep 24 13:08:44 UTC 2020 - Imobach Gonzalez Sosa <igonzalezsosa@suse.com>
 
 - Add the schema for 'backup' and 'upgrade' sections (bsc#1176834).

@@ -22,6 +22,8 @@ cp $COMMON $RNC_OUTPUT
 # distinction is obsolete except in this script
 install=""
 configure=""
+# NOTE: 'classes' and 'runlevel' are hard-coded in 'classes-use.rnc' and 'runlevels.rnc'
+known=" | classes | runlevel"
 
 # check all desktop files
 
@@ -43,21 +45,24 @@ for desktop in `find $DESKTOP_DIR $DESKTOP_DIR2 -name '*.desktop' | LC_ALL=C sor
     X_SuSE_YaST_AutoInstOptional=${X_SuSE_YaST_AutoInstOptional##*=}
 
     if [ -z "$X_SuSE_YaST_AutoInstResource" ]; then
-	resource=`basename $desktop .desktop`
+        resource=`basename $desktop .desktop`
         resource="FLAG__X_SuSE_YaST_AutoInstResource__not_set__in_$resource"
     else
         resource=$X_SuSE_YaST_AutoInstResource
+        known="$known | $resource"
     fi
 
     # HACK: avoid creating a separate desktop file
     # for user_defaults (#215249#c7)
     if [ "$resource" = "users" ]; then
-	resource="user_defaults? & groups? & login_settings? & users"
+        resource="user_defaults? & groups? & login_settings? & users"
+        known="$known | user_defaults | groups | login_settings"
     fi
 
     # same hack as for users. pxe.rnc is part of autoyast but has no client
     if [ "$resource" = "general" ]; then
         resource="general? & pxe"
+        known="$known | general | pxe"
         cp  $SCHEMA_DIR/pxe.rnc $RNC_OUTPUT
         echo "include 'pxe.rnc' # autoyast2" >> $RNC_OUTPUT/includes.rnc
     fi
@@ -86,15 +91,19 @@ done
 # remove the initial connector
 install="${install# & }"
 configure="${configure# & }"
+known="${known# | }"
 
 echo >&2 "install:   $install"
 echo >&2 "configure: $configure"
+echo >&2 "known:     $known"
 
 # escape the connector for sed: & -> \&
 install="${install//&/\\&}"
 configure="${configure//&/\\&}"
+known="${known//|/\\|}"
 
 # add those components we have found
 sed -e "s/CONFIGURE_RESOURCE/${configure}/" \
     -e "s/INSTALL_RESOURCE/${install}/" \
+    -e "s/KNOWN_RESOURCE/${known}/" \
     $TEMPLATE > $RNC_OUTPUT/profile.rnc

@@ -7,8 +7,12 @@ include "includes.rnc"
 
 include "classes-use.rnc"
 
+any_content = any_element* & text
+any_element = element * - (KNOWN_RESOURCE) { any_attribute*, any_content }
+any_attribute = attribute * { text }
+
 profile = element profile {
-   classes? & CONFIGURE_RESOURCE & INSTALL_RESOURCE
+   classes? & CONFIGURE_RESOURCE & INSTALL_RESOURCE & any_content?
 }
 
 start = profile

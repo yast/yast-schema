@@ -36,8 +36,8 @@ BuildRequires:	trang yast2-devtools
 # All packages providing RNG files for AutoYaST
 # in /usr/share/YaST2/schema/autoyast/rng/*.rng
 
-# drop 'mouse' element
-BuildRequires: autoyast2 >= 4.3.55
+# 'activated_systemd_default_target' and 'final_restart_services' in 'general/mode'
+BuildRequires: autoyast2 >= 4.3.57
 BuildRequires: yast2
 # add_on_products and add_on_others types
 BuildRequires: yast2-add-on >= 4.3.3

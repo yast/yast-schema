@@ -1,4 +1,10 @@
 -------------------------------------------------------------------
+Thu Oct  1 12:51:56 UTC 2020 - Imobach Gonzalez Sosa <igonzalezsosa@suse.com>
+
+- Do not validate unknown sections (bsc#1177173).
+- 4.3.12
+
+-------------------------------------------------------------------
 Thu Oct  1 08:11:28 UTC 2020 - Imobach Gonzalez Sosa <igonzalezsosa@suse.com>
 
 - Add validation of 'activate_systemd_default_target' and

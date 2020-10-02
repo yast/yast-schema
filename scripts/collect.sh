@@ -100,7 +100,6 @@ echo >&2 "known:     $known"
 # escape the connector for sed: & -> \&
 install="${install//&/\\&}"
 configure="${configure//&/\\&}"
-known="${known//|/\\|}"
 
 # add those components we have found
 sed -e "s/CONFIGURE_RESOURCE/${configure}/" \

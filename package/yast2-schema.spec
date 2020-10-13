@@ -17,7 +17,7 @@
 
 
 Name:           yast2-schema
-Version:        4.3.13
+Version:        4.3.14
 Release:        0
 
 BuildRoot:      %{_tmppath}/%{name}-%{version}-build
@@ -36,16 +36,16 @@ BuildRequires:	trang yast2-devtools
 # All packages providing RNG files for AutoYaST
 # in /usr/share/YaST2/schema/autoyast/rng/*.rng
 
-# 'activated_systemd_default_target' and 'final_restart_services' in 'general/mode'
-BuildRequires: autoyast2 >= 4.3.57
+# set 't' element in 'backup' and 'upgrade' elements
+BuildRequires: autoyast2 >= 4.3.61
 BuildRequires: yast2
 # add_on_products and add_on_others types
 BuildRequires: yast2-add-on >= 4.3.3
 BuildRequires: yast2-audit-laf >= 4.3.0
 BuildRequires: yast2-auth-client >= 4.3.0
 BuildRequires: yast2-auth-server
-# drop 'suse_btrfs' element
-BuildRequires: yast2-bootloader >= 4.3.11
+# set 't' element in 'initrd_module' element
+BuildRequires: yast2-bootloader >= 4.3.12
 BuildRequires: yast2-country >= 4.3.0
 BuildRequires: yast2-configuration-management >= 4.3.0
 BuildRequires: yast2-dhcp-server >= 4.3.0

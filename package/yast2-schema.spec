@@ -44,8 +44,8 @@ BuildRequires: yast2-add-on >= 4.3.3
 BuildRequires: yast2-audit-laf >= 4.3.0
 BuildRequires: yast2-auth-client >= 4.3.0
 BuildRequires: yast2-auth-server
-# drop 'suse_btrfs' element
-BuildRequires: yast2-bootloader >= 4.3.11
+# set 't' element in 'initrd_module' element
+BuildRequires: yast2-bootloader >= 4.3.12
 BuildRequires: yast2-country >= 4.3.0
 BuildRequires: yast2-configuration-management >= 4.3.0
 BuildRequires: yast2-dhcp-server >= 4.3.0

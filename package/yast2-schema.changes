@@ -1,4 +1,11 @@
 -------------------------------------------------------------------
+Tue Oct 13 10:12:16 UTC 2020 - Imobach Gonzalez Sosa <igonzalezsosa@suse.com>
+
+- Allow setting the 't' (or 'config:type') attribute in the
+  'backup' and 'upgrade' elements (bsc#1176834 and bsc#1176848).
+- 4.3.14
+
+-------------------------------------------------------------------
 Fri Oct  9 05:58:37 UTC 2020 - Imobach Gonzalez Sosa <igonzalezsosa@suse.com>
 
 - AutoYaST schema (bsc#1174133, bsc#1177496):

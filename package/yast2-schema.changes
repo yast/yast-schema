@@ -1,8 +1,9 @@
 -------------------------------------------------------------------
 Tue Oct 13 10:12:16 UTC 2020 - Imobach Gonzalez Sosa <igonzalezsosa@suse.com>
 
-- Allow setting the 't' (or 'config:type') attribute in the
-  'backup' and 'upgrade' elements (bsc#1176834 and bsc#1176848).
+- Allow setting the 't' (or 'config:type') attribute in:
+  - 'backup' and 'upgrade' elements (bsc#1176834 and bsc#1176848).
+  - 'initrd_module' element (bsc#1177058).
 - 4.3.14
 
 -------------------------------------------------------------------

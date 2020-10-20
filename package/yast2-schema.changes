@@ -1,7 +1,7 @@
 -------------------------------------------------------------------
 Tue Oct 20 16:15:12 CEST 2020 - schubi@suse.de
 
-- Registration/Addons: Architecture and version is optional.
+- Registration/Addons: Architecture and version are optional.
   (jsc#SLE-16225)
 - 4.3.15
 

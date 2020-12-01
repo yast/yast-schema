@@ -17,45 +17,7 @@ jobs:
       uses: actions/checkout@v1
 
     - name: Install Dependencies
-      run: |
-        zypper --non-interactive install --no-recommends \
-          autoyast2 \
-          libxml2-tools \
-          jing \
-          trang \
-          yast2 \
-          yast2-add-on \
-          yast2-audit-laf \
-          yast2-auth-client \
-          yast2-auth-server \
-          yast2-bootloader \
-          yast2-country \
-          yast2-dhcp-server \
-          yast2-dns-server \
-          yast2-firewall \
-          yast2-firstboot \
-          yast2-ftp-server \
-          yast2-geo-cluster \
-          yast2-http-server \
-          yast2-installation \
-          yast2-iscsi-client \
-          yast2-kdump \
-          yast2-mail \
-          yast2-network \
-          yast2-nfs-client \
-          yast2-nfs-server \
-          yast2-nis-client \
-          yast2-nis-server \
-          yast2-ntp-client \
-          yast2-online-update-configuration \
-          yast2-printer \
-          yast2-proxy \
-          yast2-registration \
-          yast2-samba-client \
-          yast2-samba-server \
-          yast2-sound \
-          yast2-squid \
-          yast2-tftp-server
+      run: rake build_dependencies:install
 
     # just for easier debugging...
     - name: Inspect Installed Packages

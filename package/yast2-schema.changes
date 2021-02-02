@@ -1,7 +1,8 @@
 -------------------------------------------------------------------
 Tue Feb  2 07:39:54 UTC 2021 - Knut Anderssen <kanderssen@suse.com>
 
-- Add networking interface section 'lladdr' element (bsc#1179876)
+- Add the 'lladdr' element to the networking interface section
+  (bsc#1179876).
 - 4.3.17
 
 -------------------------------------------------------------------

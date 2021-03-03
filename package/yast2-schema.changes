@@ -1,4 +1,11 @@
 -------------------------------------------------------------------
+Wed Mar  3 15:33:51 UTC 2021 - Imobach Gonzalez Sosa <igonzalezsosa@suse.com>
+
+- Allow using 'zone' instead of 'listentry' in the list of zones
+  (bsc#1181718).
+- 4.3.20
+
+-------------------------------------------------------------------
 Wed Mar  3 09:38:03 UTC 2021 - Imobach Gonzalez Sosa <igonzalezsosa@suse.com>
 
 - Add 'bridge_forward_delay' to the interfaces in the networking 

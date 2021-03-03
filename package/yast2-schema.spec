@@ -17,7 +17,7 @@
 
 
 Name:           yast2-schema
-Version:        4.2.12
+Version:        4.2.13
 Release:        0
 
 BuildRoot:      %{_tmppath}/%{name}-%{version}-build
@@ -54,10 +54,12 @@ BuildRequires: yast2-ftp-server
 BuildRequires: yast2-tftp-server >= 4.1.7
 BuildRequires: yast2-http-server
 BuildRequires: yast2-installation
-BuildRequires: yast2-iscsi-client
+# add 'iface' element
+BuildRequires: yast2-iscsi-client >= 4.2.7
 BuildRequires: yast2-kdump
 BuildRequires: yast2-mail
-BuildRequires: yast2-network
+# add 'bridge_forward_delay' element
+BuildRequires: yast2-network >= 4.2.93
 BuildRequires: yast2-nfs-client
 BuildRequires: yast2-nfs-server
 BuildRequires: yast2-nis-client

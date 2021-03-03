@@ -49,7 +49,8 @@ BuildRequires: yast2-bootloader >= 4.3.12
 BuildRequires: yast2-country >= 4.3.0
 BuildRequires: yast2-configuration-management >= 4.3.0
 BuildRequires: yast2-dhcp-server >= 4.3.0
-BuildRequires: yast2-dns-server >= 4.3.0
+# allow 'zone' instead of 'listentry'
+BuildRequires: yast2-dns-server >= 4.3.3
 BuildRequires: yast2-firewall >= 4.3.0
 BuildRequires: yast2-firstboot >= 4.3.0
 BuildRequires: yast2-ftp-server >= 4.3.0

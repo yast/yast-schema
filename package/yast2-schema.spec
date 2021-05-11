@@ -36,8 +36,8 @@ BuildRequires:	trang yast2-devtools
 # All packages providing RNG files for AutoYaST
 # in /usr/share/YaST2/schema/autoyast/rng/*.rng
 
-# add the 'mkfs_options' element
-BuildRequires: autoyast2 >= 4.3.77
+# update <ask> section: add 'static_text' as a possible value for the 'ask/type' element
+BuildRequires: autoyast2 >= 4.3.79
 BuildRequires: yast2
 # add_on_products and add_on_others types
 BuildRequires: yast2-add-on >= 4.3.3

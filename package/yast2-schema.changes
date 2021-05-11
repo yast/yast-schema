@@ -1,4 +1,11 @@
 -------------------------------------------------------------------
+Tue May 11 11:35:36 UTC 2021 - Imobach Gonzalez Sosa <igonzalezsosa@suse.com>
+
+- Consider 'static_text' as a valid value for 'ask/type' elements
+  (bsc#1185909).
+- 4.3.23
+
+-------------------------------------------------------------------
 Mon Apr  5 08:49:43 UTC 2021 - Imobach Gonzalez Sosa <igonzalezsosa@suse.com>
 
 - Add the 'mkfs_options' element to the 'partition' section

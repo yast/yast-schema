@@ -17,7 +17,7 @@
 
 
 Name:           yast2-schema
-Version:        4.4.2
+Version:        4.4.3
 Release:        0
 
 BuildRoot:      %{_tmppath}/%{name}-%{version}-build
@@ -92,6 +92,8 @@ BuildRequires: yast2-squid
 BuildRequires: yast2-sysconfig
 # tag home_btrfs_subvolume
 BuildRequires: yast2-users >= 4.1.11
+# Add ipv4_forward and ipv6_forward in network (bsc#1186280)
+BuildRequires: yast2-installation-control >= 4.4.2
 
 
 #!BuildIgnore: yast2-build-test

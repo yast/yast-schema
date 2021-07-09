@@ -17,7 +17,7 @@
 
 
 Name:           yast2-schema
-Version:        4.2.13
+Version:        4.2.14
 Release:        0
 
 BuildRoot:      %{_tmppath}/%{name}-%{version}-build
@@ -35,7 +35,7 @@ BuildRequires:	trang yast2-devtools
 # in /usr/share/YaST2/schema/autoyast/rng/*.rng
 
 # drop 'mouse' element
-BuildRequires: autoyast2 >= 4.2.46
+BuildRequires: autoyast2 >= 4.2.54
 BuildRequires: yast2
 # add_on_others element
 BuildRequires: yast2-add-on >= 4.2.4

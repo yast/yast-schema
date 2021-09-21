@@ -34,8 +34,8 @@ BuildRequires:	trang yast2-devtools
 # All packages providing RNG files for AutoYaST
 # in /usr/share/YaST2/schema/autoyast/rng/*.rng
 
-# add missing elements to rules.xml schema
-BuildRequires: autoyast2 >= 4.2.54
+# update rules.xml schema: add "hostname" and remove "haspcmica"
+BuildRequires: autoyast2 >= 4.2.56
 BuildRequires: yast2
 # add_on_others element
 BuildRequires: yast2-add-on >= 4.2.4

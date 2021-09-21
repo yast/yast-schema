@@ -1,4 +1,10 @@
 -------------------------------------------------------------------
+Tue Sep 21 12:03:42 UTC 2021 - Imobach Gonzalez Sosa <igonzalezsosa@suse.com>
+
+- Add the "hostname" element to the rules schema (bsc#1190696).
+- 4.3.25
+
+-------------------------------------------------------------------
 Fri Jul  9 14:22:21 UTC 2021 - Imobach Gonzalez Sosa <igonzalezsosa@suse.com>
 
 - Add missing elements to rules.xml schema:

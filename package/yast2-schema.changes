@@ -1,4 +1,12 @@
 -------------------------------------------------------------------
+Tue Sep 21 12:03:42 UTC 2021 - Imobach Gonzalez Sosa <igonzalezsosa@suse.com>
+
+- Update the rules.xml schema:
+  - add the "hostname" element (bsc#1190696).
+  - remove the 'haspcmica' element (related to bsc#1183352).
+- 4.2.15
+
+-------------------------------------------------------------------
 Fri Jul  9 14:22:21 UTC 2021 - Imobach Gonzalez Sosa <igonzalezsosa@suse.com>
 
 - Add missing elements to rules.xml schema:

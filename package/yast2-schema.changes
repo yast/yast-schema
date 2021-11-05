@@ -1,4 +1,11 @@
 -------------------------------------------------------------------
+Thu Nov  4 16:05:56 UTC 2021 - Knut Anderssen <kanderssen@suse.com>
+
+- Add 'description' to the interfaces in the networking section
+  (bsc#1192270).
+- 4.2.16
+
+-------------------------------------------------------------------
 Tue Sep 21 12:03:42 UTC 2021 - Imobach Gonzalez Sosa <igonzalezsosa@suse.com>
 
 - Update the rules.xml schema:

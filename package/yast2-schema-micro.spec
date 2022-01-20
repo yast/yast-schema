@@ -1,7 +1,7 @@
 #
-# spec file for package yast2-schema
+# spec file for package yast2-schema-micro
 #
-# Copyright (c) 2013 SUSE LINUX Products GmbH, Nuernberg, Germany.
+# Copyright (c) 2022 SUSE LLC
 #
 # All modifications and additions to the file contributed by third parties
 # remain the property of their copyright owners, unless otherwise agreed
@@ -12,87 +12,57 @@
 # license that conforms to the Open Source Definition (Version 1.9)
 # published by the Open Source Initiative.
 
-# Please submit bugfixes or comments via http://bugs.opensuse.org/
+# Please submit bugfixes or comments via https://bugs.opensuse.org/
 #
 
 
-Name:           yast2-schema
-# Keep versions in sync with yast2-schema-micro
+Name:           yast2-schema-micro
 Version:        4.4.8
 Release:        0
 
 BuildRoot:      %{_tmppath}/%{name}-%{version}-build
-Source0:        %{name}-%{version}.tar.bz2
+Source0:        yast2-schema-%{version}.tar.bz2
 
-Group:	        System/YaST
-License:        GPL-2.0-or-later
+URL:            https://github.com/yast/yast-schema
 
-Url:            https://github.com/yast/yast-schema
+# provide schema, so it is full replacement
+Provides:       yast2-schema
+# both cannot be used as it uses same files
+Conflicts:      yast2-schema
 
 # Dependencies needed to build the package
 BuildRequires:  jing
 BuildRequires:  libxml2-tools
-BuildRequires:	trang yast2-devtools
+BuildRequires:  trang
+BuildRequires:  yast2-devtools
 
 # All packages providing RNG files for AutoYaST
 # in /usr/share/YaST2/schema/autoyast/rng/*.rng
 
 # add 'efi' element to the rules schema
-BuildRequires: autoyast2 >= 4.4.21
-BuildRequires: yast2
+BuildRequires:  autoyast2 >= 4.4.21
+BuildRequires:  yast2
 # add_on_products and add_on_others types
-BuildRequires: yast2-add-on >= 4.3.3
-BuildRequires: yast2-audit-laf >= 4.3.0
-BuildRequires: yast2-auth-client >= 4.3.0
-BuildRequires: yast2-auth-server
+BuildRequires:  yast2-add-on >= 4.3.3
 # set 't' element in 'initrd_module' element
-BuildRequires: yast2-bootloader >= 4.3.12
-BuildRequires: yast2-country >= 4.3.0
-BuildRequires: yast2-configuration-management >= 4.3.0
-BuildRequires: yast2-dhcp-server >= 4.3.0
-# allow 'zone' instead of 'listentry'
-BuildRequires: yast2-dns-server >= 4.3.3
-BuildRequires: yast2-firewall >= 4.3.0
-BuildRequires: yast2-firstboot >= 4.3.0
-BuildRequires: yast2-ftp-server >= 4.3.0
-BuildRequires: yast2-tftp-server >= 4.1.7
-BuildRequires: yast2-geo-cluster >= 4.3.0
-BuildRequires: yast2-http-server
-BuildRequires: yast2-installation
+BuildRequires:  yast2-bootloader >= 4.3.12
+BuildRequires:  yast2-configuration-management >= 4.3.0
+BuildRequires:  yast2-country >= 4.3.0
 # add 'iface' element
-BuildRequires: yast2-iscsi-client >= 4.3.3
-BuildRequires: yast2-kdump
-BuildRequires: yast2-mail >= 4.3.3
+BuildRequires:  yast2-iscsi-client >= 4.3.3
+BuildRequires:  yast2-kdump
 # Added backend to the networking section
-BuildRequires: yast2-network >= 4.4.29
-BuildRequires: yast2-nfs-client
-BuildRequires: yast2-nfs-server
-BuildRequires: yast2-nis-client
-BuildRequires: yast2-nis-server
-BuildRequires: yast2-ntp-client
-BuildRequires: yast2-online-update-configuration
-BuildRequires: yast2-printer
-BuildRequires: yast2-proxy
+BuildRequires:  yast2-network >= 4.4.29
 # registration is available only where suse connect is also available
 %ifnarch s390 %ix86
 # addons: architecture/version is optional
-BuildRequires: yast2-registration >= 4.3.12
+BuildRequires:  yast2-registration >= 4.3.12
 %endif
-# Package available for S390 only
-%ifarch s390 s390x
-BuildRequires: yast2-s390
-%endif
-BuildRequires: yast2-samba-client
-BuildRequires: yast2-samba-server
 # Added lsm 'none' section to security.rnc
-BuildRequires: yast2-security >= 4.4.7
-BuildRequires: yast2-services-manager
-BuildRequires: yast2-sound
-BuildRequires: yast2-squid
-BuildRequires: yast2-sysconfig
+BuildRequires:  yast2-security >= 4.4.7
+BuildRequires:  yast2-services-manager
 # tag home_btrfs_subvolume
-BuildRequires: yast2-users >= 4.1.11
-
+BuildRequires:  yast2-users >= 4.1.11
 
 #!BuildIgnore: yast2-build-test
 
@@ -113,20 +83,22 @@ BuildRequires: yast2-users >= 4.1.11
 #!BuildIgnore: yast2-country-data
 #!BuildIgnore: yast2-control-center yast2-control-center-gnome yast2-control-center-qt
 
-Summary:	YaST2 - AutoYaST Schema
+Summary:        YaST2 - AutoYaST Schema for Micro
+License:        GPL-2.0-or-later
+Group:          System/YaST
 
 %description
-AutoYaST Syntax Schema
+AutoYaST Syntax Schema for Micro product
 
 %prep
-%setup -n %{name}-%{version}
+%setup -n yast2-schema-%{version}
 
 %build
 %yast_build
 
 %install
 %yast_install
-
+rm -rf %{buildroot}/%{_docdir}/yast2-schema
 
 %files
 %defattr(-,root,root)
@@ -135,5 +107,5 @@ AutoYaST Syntax Schema
 %{yast_schemadir}/autoyast/rnc/includes.rnc
 %dir %{yast_schemadir}/autoyast/rng
 %{yast_schemadir}/autoyast/rng/*.rng
-%doc %{yast_docdir} 
-%license COPYING
+
+%changelog

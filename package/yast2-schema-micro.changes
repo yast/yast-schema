@@ -1,0 +1,6 @@
+-------------------------------------------------------------------
+Wed Jan 19 14:16:09 UTC 2022 - Josef Reidinger <jreidinger@suse.com>
+
+- initial package to have dedicated limited schema for Micro
+  product (jsc#SLE-18820)
+- 4.4.9

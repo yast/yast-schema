@@ -36,13 +36,9 @@ BuildRequires:  libxml2-tools
 BuildRequires:  trang
 BuildRequires:  yast2-devtools
 
-# All packages providing RNG files for AutoYaST
-# in /usr/share/YaST2/schema/autoyast/rng/*.rng
-
-# add 'efi' element to the rules schema
-BuildRequires:  autoyast2 >= 4.4.21
+# use SLE15 SP3 Update dependencies as micro is based on SP3
+BuildRequires:  autoyast2 >= 4.3.94
 BuildRequires:  yast2
-# add_on_products and add_on_others types
 BuildRequires:  yast2-add-on >= 4.3.3
 # set 't' element in 'initrd_module' element
 BuildRequires:  yast2-bootloader >= 4.3.12
@@ -51,15 +47,13 @@ BuildRequires:  yast2-country >= 4.3.0
 # add 'iface' element
 BuildRequires:  yast2-iscsi-client >= 4.3.3
 BuildRequires:  yast2-kdump
-# Added backend to the networking section
-BuildRequires:  yast2-network >= 4.4.29
+BuildRequires:  yast2-network >= 4.3.81
 # registration is available only where suse connect is also available
 %ifnarch s390 %ix86
 # addons: architecture/version is optional
 BuildRequires:  yast2-registration >= 4.3.12
 %endif
-# Added lsm 'none' section to security.rnc
-BuildRequires:  yast2-security >= 4.4.7
+BuildRequires:  yast2-security >= 4.3.17
 BuildRequires:  yast2-services-manager
 # tag home_btrfs_subvolume
 BuildRequires:  yast2-users >= 4.1.11

@@ -1,5 +1,5 @@
 #
-# spec file for package yast2-schema
+# spec file for package yast2-schema-default
 #
 # Copyright (c) 2013 SUSE LINUX Products GmbH, Nuernberg, Germany.
 #
@@ -16,9 +16,9 @@
 #
 
 
-Name:           yast2-schema
+Name:           yast2-schema-default
 # Keep versions in sync with yast2-schema-micro
-Version:        4.4.8
+Version:        4.4.9
 Release:        0
 
 BuildRoot:      %{_tmppath}/%{name}-%{version}-build
@@ -28,6 +28,10 @@ Group:	        System/YaST
 License:        GPL-2.0-or-later
 
 Url:            https://github.com/yast/yast-schema
+
+Provides:       yast2-schema
+Conflicts:      yast2-schema-micro
+Obsoletes:      yast2-schema < 4.4.9
 
 # Dependencies needed to build the package
 BuildRequires:  jing

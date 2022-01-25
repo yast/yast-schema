@@ -29,9 +29,9 @@ URL:            https://github.com/yast/yast-schema
 
 # provide schema, so it is full replacement
 Provides:       yast2-schema
-# both cannot be used as it uses same files
-Conflicts:      yast2-schema-default
-Obsoletes:       yast2-schema < 4.4.9
+# others cannot be used as it contains same files
+Conflicts:      otherproviders(yast2-schema)
+Obsoletes:      yast2-schema < 4.4.9
 
 # Dependencies needed to build the package
 BuildRequires:  jing

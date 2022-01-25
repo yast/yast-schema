@@ -1,8 +1,9 @@
 -------------------------------------------------------------------
 Tue Jan 25 14:21:41 UTC 2022 - Josef Reidinger <jreidinger@suse.com>
 
-- Split package to yast2-schema-full and yast2-schema-micro to
-  respect limited set of modules in Micro product (jsc#SLE-18820)
+- Split the package into yast2-schema-default and
+  yast2-schema-micro to respect limited set of modules in Micro
+  product (jsc#SLE-18820)
 - 4.4.9
 
 -------------------------------------------------------------------

@@ -29,7 +29,7 @@ URL:            https://github.com/yast/yast-schema
 Provides:       yast2-schema
 # both cannot be used as it uses same files
 Conflicts:      yast2-schema-default
-Obsolets:       yast2-schema < 4.4.9
+Obsoletes:       yast2-schema < 4.4.9
 
 # Dependencies needed to build the package
 BuildRequires:  jing

@@ -17,18 +17,21 @@
 
 
 Name:           yast2-schema-micro
-Version:        4.4.8
+Version:        4.4.9
 Release:        0
 
 BuildRoot:      %{_tmppath}/%{name}-%{version}-build
-Source0:        yast2-schema-%{version}.tar.bz2
+# source to generate rpm is same as with default, just limited set of build depedencies
+# results in limited profile
+Source0:        yast2-schema-default-%{version}.tar.bz2
 
 URL:            https://github.com/yast/yast-schema
 
 # provide schema, so it is full replacement
 Provides:       yast2-schema
-# both cannot be used as it uses same files
-Conflicts:      yast2-schema
+# others cannot be used as it contains same files
+Conflicts:      otherproviders(yast2-schema)
+Obsoletes:      yast2-schema < 4.4.9
 
 # Dependencies needed to build the package
 BuildRequires:  jing
@@ -85,14 +88,14 @@ Group:          System/YaST
 AutoYaST Syntax Schema for Micro product
 
 %prep
-%setup -n yast2-schema-%{version}
+%setup -n yast2-schema-default-%{version}
 
 %build
 %yast_build
 
 %install
 %yast_install
-rm -rf %{buildroot}/%{_docdir}/yast2-schema
+rm -rf %{buildroot}/%{_docdir}/yast2-schema-default
 
 %files
 %defattr(-,root,root)

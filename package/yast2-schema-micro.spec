@@ -21,7 +21,9 @@ Version:        4.4.9
 Release:        0
 
 BuildRoot:      %{_tmppath}/%{name}-%{version}-build
-Source0:        yast2-schema-%{version}.tar.bz2
+# source to generate rpm is same as with default, just limited set of build depedencies
+# results in limited profile
+Source0:        yast2-schema-default-%{version}.tar.bz2
 
 URL:            https://github.com/yast/yast-schema
 
@@ -86,14 +88,14 @@ Group:          System/YaST
 AutoYaST Syntax Schema for Micro product
 
 %prep
-%setup -n yast2-schema-%{version}
+%setup -n yast2-schema-default-%{version}
 
 %build
 %yast_build
 
 %install
 %yast_install
-rm -rf %{buildroot}/%{_docdir}/yast2-schema
+rm -rf %{buildroot}/%{_docdir}/yast2-schema-default
 
 %files
 %defattr(-,root,root)

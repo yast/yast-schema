@@ -1,5 +1,5 @@
 -------------------------------------------------------------------
-Wed Jan 26 14:38:52 UTC 2022 - Knut Alejandro Anderssen González <kanderssen@suse.com>
+Wed Jan 26 14:38:52 UTC 2022 - Knut Anderssen <kanderssen@suse.com>
 
 - Removed 'lsm' section adding just the 'lsm_select' element to the
   security section (related to jsc#SLE-22069).

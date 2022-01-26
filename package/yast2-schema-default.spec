@@ -18,7 +18,7 @@
 
 Name:           yast2-schema-default
 # Keep versions in sync with yast2-schema-micro
-Version:        4.4.9
+Version:        4.4.10
 Release:        0
 
 BuildRoot:      %{_tmppath}/%{name}-%{version}-build
@@ -89,8 +89,8 @@ BuildRequires: yast2-s390
 %endif
 BuildRequires: yast2-samba-client
 BuildRequires: yast2-samba-server
-# Added lsm 'none' section to security.rnc
-BuildRequires: yast2-security >= 4.4.7
+# Removed 'lsm' section and added 'lsm_select' to security.rnc
+BuildRequires: yast2-security >= 4.4.10
 BuildRequires: yast2-services-manager
 BuildRequires: yast2-sound
 BuildRequires: yast2-squid

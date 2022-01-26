@@ -1,4 +1,11 @@
 -------------------------------------------------------------------
+Wed Jan 26 14:38:52 UTC 2022 - Knut Alejandro Anderssen González <kanderssen@suse.com>
+
+- Removed 'lsm' section adding just the 'lsm_select' element to the
+  security section (related to jsc#SLE-22069).
+- 4.4.10
+
+-------------------------------------------------------------------
 Tue Jan 25 14:21:41 UTC 2022 - Josef Reidinger <jreidinger@suse.com>
 
 - Split the package into yast2-schema-default and

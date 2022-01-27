@@ -28,9 +28,9 @@ Source0:        yast2-schema-default-%{version}.tar.bz2
 URL:            https://github.com/yast/yast-schema
 
 # provide schema, so it is full replacement
-Provides:       yast2-schema
+Provides:       yast2-schema = %{version}
 # others cannot be used as it contains same files
-Conflicts:      otherproviders(yast2-schema)
+Conflicts:      yast2-schema
 Obsoletes:      yast2-schema < 4.4.9
 
 # Dependencies needed to build the package

@@ -29,9 +29,9 @@ License:        GPL-2.0-or-later
 
 Url:            https://github.com/yast/yast-schema
 
-Provides:       yast2-schema
+Provides:       yast2-schema = %{version}
 # others cannot be used as it contains same files
-Conflicts:      otherproviders(yast2-schema)
+Conflicts:      yast2-schema
 Obsoletes:      yast2-schema < 4.4.9
 
 # Dependencies needed to build the package

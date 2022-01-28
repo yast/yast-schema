@@ -1,4 +1,10 @@
 -------------------------------------------------------------------
+Wed Jan 26 22:58:53 UTC 2022 - Knut Anderssen <kanderssen@suse.com>
+
+- Synced version with default schema (related to jsc#SLE-22069).
+- 4.4.10
+
+-------------------------------------------------------------------
 Fri Jan 21 12:04:34 UTC 2022 - Josef Reidinger <jreidinger@suse.com>
 
 - Adapt dependencies for SLE15 SP3 as micro is based on it 

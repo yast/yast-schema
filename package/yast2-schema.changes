@@ -1,4 +1,10 @@
 -------------------------------------------------------------------
+Fri Feb 18 14:35:23 UTC 2022 - Knut Anderssen <kanderssen@suse.com>
+
+- Added fcoe-client schema (bsc#1194895)
+- 4.3.28
+
+-------------------------------------------------------------------
 Thu Nov  4 16:05:56 UTC 2021 - Knut Anderssen <kanderssen@suse.com>
 
 - Add 'description' to the interfaces in the networking section

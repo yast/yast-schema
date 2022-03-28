@@ -74,8 +74,11 @@ BuildRequires: yast2-mail >= 4.3.3
 BuildRequires: yast2-network >= 4.4.29
 BuildRequires: yast2-nfs-client
 BuildRequires: yast2-nfs-server
+# YaST NIS packages are dropped from TW (bsc#1183893)
+%if 0%{?suse_version} > 1500
 BuildRequires: yast2-nis-client
 BuildRequires: yast2-nis-server
+%endif
 BuildRequires: yast2-ntp-client
 BuildRequires: yast2-online-update-configuration
 BuildRequires: yast2-printer

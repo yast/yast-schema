@@ -17,7 +17,7 @@
 
 
 Name:           yast2-schema
-Version:        4.3.28
+Version:        4.3.29
 Release:        0
 
 BuildRoot:      %{_tmppath}/%{name}-%{version}-build

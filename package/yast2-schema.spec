@@ -36,8 +36,8 @@ BuildRequires:	trang yast2-devtools
 # All packages providing RNG files for AutoYaST
 # in /usr/share/YaST2/schema/autoyast/rng/*.rng
 
-# add 'keep_unknown_lv' element to the partitioning schema
-BuildRequires: autoyast2 >= 4.3.91
+# fix 'rules' validation ('conflicts' and 'dialog')
+BuildRequires: autoyast2 >= 4.3.102
 BuildRequires: yast2
 # add_on_products and add_on_others types
 BuildRequires: yast2-add-on >= 4.3.3

@@ -1,4 +1,10 @@
 -------------------------------------------------------------------
+Wed May  4 05:46:40 UTC 2022 - Imobach Gonzalez Sosa <igonzalezsosa@suse.com>
+
+- Fix rules validation when using a dialog (bsc#1199165).
+- 4.4.12
+
+-------------------------------------------------------------------
 Fri Feb 18 14:35:52 UTC 2022 - Knut Anderssen <kanderssen@suse.com>
 
 - Added fcoe-client schema (bsc#1194895)

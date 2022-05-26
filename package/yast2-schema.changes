@@ -1,4 +1,11 @@
 -------------------------------------------------------------------
+Thu May 26 15:34:50 UTC 2022 - Imobach Gonzalez Sosa <igonzalezsosa@suse.com>
+
+- Support for flatten and nested "category_filter" element in the
+  "online_update_configuration" section (bsc#1198848).
+- 4.3.30
+
+-------------------------------------------------------------------
 Wed May  4 05:46:40 UTC 2022 - Imobach Gonzalez Sosa <igonzalezsosa@suse.com>
 
 - Fix rules validation when using a dialog (bsc#1199165).

@@ -18,7 +18,7 @@
 
 Name:           yast2-schema-default
 # Keep versions in sync with yast2-schema-micro
-Version:        4.4.12
+Version:        4.4.13
 Release:        0
 
 BuildRoot:      %{_tmppath}/%{name}-%{version}-build
@@ -77,7 +77,8 @@ BuildRequires: yast2-nfs-server
 BuildRequires: yast2-nis-client
 BuildRequires: yast2-nis-server
 BuildRequires: yast2-ntp-client
-BuildRequires: yast2-online-update-configuration
+# nested category_filter (bsc#1198848)
+BuildRequires: yast2-online-update-configuration >= 4.4.1
 BuildRequires: yast2-printer
 BuildRequires: yast2-proxy
 # registration is available only where suse connect is also available

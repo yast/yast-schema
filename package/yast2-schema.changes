@@ -1,4 +1,10 @@
 -------------------------------------------------------------------
+Mon Jul  4 13:20:29 UTC 2022 - Knut Anderssen <kanderssen@suse.com>
+
+- Add 'extrapara' to routes in the networking section (bsc#1201129)
+- 4.2.17
+
+-------------------------------------------------------------------
 Thu Nov  4 16:05:56 UTC 2021 - Knut Anderssen <kanderssen@suse.com>
 
 - Add 'description' to the interfaces in the networking section

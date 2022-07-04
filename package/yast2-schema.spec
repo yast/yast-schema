@@ -17,7 +17,7 @@
 
 
 Name:           yast2-schema
-Version:        4.2.16
+Version:        4.2.17
 Release:        0
 
 BuildRoot:      %{_tmppath}/%{name}-%{version}-build
@@ -58,8 +58,8 @@ BuildRequires: yast2-installation
 BuildRequires: yast2-iscsi-client >= 4.2.7
 BuildRequires: yast2-kdump
 BuildRequires: yast2-mail
-# add interface 'description' element
-BuildRequires: yast2-network >= 4.2.107
+# add route 'extrapara' element
+BuildRequires: yast2-network >= 4.2.110
 BuildRequires: yast2-nfs-client
 BuildRequires: yast2-nfs-server
 BuildRequires: yast2-nis-client

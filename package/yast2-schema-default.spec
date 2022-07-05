@@ -18,7 +18,7 @@
 
 Name:           yast2-schema-default
 # Keep versions in sync with yast2-schema-micro
-Version:        4.4.13
+Version:        4.4.14
 Release:        0
 
 BuildRoot:      %{_tmppath}/%{name}-%{version}-build
@@ -70,8 +70,8 @@ BuildRequires: yast2-installation
 BuildRequires: yast2-iscsi-client >= 4.3.3
 BuildRequires: yast2-kdump
 BuildRequires: yast2-mail >= 4.3.3
-# Added backend to the networking section
-BuildRequires: yast2-network >= 4.4.29
+# add route 'extrapara' element
+BuildRequires: yast2-network >= 4.4.48
 BuildRequires: yast2-nfs-client
 BuildRequires: yast2-nfs-server
 BuildRequires: yast2-nis-client

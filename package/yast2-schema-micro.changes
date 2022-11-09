@@ -1,4 +1,10 @@
 -------------------------------------------------------------------
+Thu Nov  3 17:02:28 UTC 2022 - Imobach Gonzalez Sosa <igonzalezsosa@suse.com>
+
+- Add support for security policies validation (jsc#SLE-24764).
+- 4.4.15
+
+-------------------------------------------------------------------
 Mon Jul  4 13:20:29 UTC 2022 - Knut Anderssen <kanderssen@suse.com>
 
 - Add 'extrapara' to routes in the networking section (bsc#1201129)

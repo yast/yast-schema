@@ -59,7 +59,7 @@ BuildRequires:  yast2-network >= 4.4.48
 # addons: architecture/version is optional
 BuildRequires:  yast2-registration >= 4.3.12
 %endif
-# Add support for security policies ('security_policies')
+# Add support for security policies ('security_policy')
 BuildRequires: yast2-security >= 4.4.15
 BuildRequires:  yast2-services-manager
 # tag home_btrfs_subvolume

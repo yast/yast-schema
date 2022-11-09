@@ -92,7 +92,7 @@ BuildRequires: yast2-s390
 %endif
 BuildRequires: yast2-samba-client
 BuildRequires: yast2-samba-server
-# Add support for security policies ('security_policies')
+# Add support for security policies ('security_policy')
 BuildRequires: yast2-security >= 4.4.15
 BuildRequires: yast2-services-manager
 BuildRequires: yast2-sound

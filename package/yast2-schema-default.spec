@@ -18,7 +18,7 @@
 
 Name:           yast2-schema-default
 # Keep versions in sync with yast2-schema-micro
-Version:        4.5.6
+Version:        4.5.7
 Release:        0
 
 BuildRoot:      %{_tmppath}/%{name}-%{version}-build
@@ -98,7 +98,10 @@ BuildRequires: yast2-samba-server
 # Add support for security policies ('security_policy')
 BuildRequires: yast2-security >= 4.5.3
 BuildRequires: yast2-services-manager
+# YaST sound packages are dropped from TW (bsc#1206903)
+%if 0%{?sle_version}
 BuildRequires: yast2-sound
+%endif
 BuildRequires: yast2-squid
 BuildRequires: yast2-sysconfig
 # tag home_btrfs_subvolume

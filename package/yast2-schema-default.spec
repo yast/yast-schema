@@ -18,7 +18,7 @@
 
 Name:           yast2-schema-default
 # Keep versions in sync with yast2-schema-micro
-Version:        4.5.7
+Version:        4.5.8
 Release:        0
 
 BuildRoot:      %{_tmppath}/%{name}-%{version}-build
@@ -55,8 +55,12 @@ BuildRequires: yast2-bootloader >= 4.3.12
 BuildRequires: yast2-country >= 4.3.0
 BuildRequires: yast2-configuration-management >= 4.3.0
 BuildRequires: yast2-dhcp-server >= 4.3.0
+
+# YaST DNS server package is dropped from TW (bsc#1205363)
+%if 0%{?sle_version}
 # allow 'zone' instead of 'listentry'
 BuildRequires: yast2-dns-server >= 4.3.3
+%endif
 # Added fcoe-client schema
 BuildRequires: yast2-fcoe-client >= 4.4.2
 BuildRequires: yast2-firewall >= 4.3.0

@@ -1,7 +1,7 @@
 #
-# spec file for package yast2-schema-default
+# spec file for package yast2-schema
 #
-# Copyright (c) 2013 SUSE LINUX Products GmbH, Nuernberg, Germany.
+# Copyright (c) 2023 SUSE LINUX Products GmbH, Nuernberg, Germany.
 #
 # All modifications and additions to the file contributed by third parties
 # remain the property of their copyright owners, unless otherwise agreed
@@ -16,28 +16,33 @@
 #
 
 
-Name:           yast2-schema-default
-# Keep versions in sync with yast2-schema-micro
-Version:        4.6.0
+%if "@BUILD_FLAVOR@" == ""
+%global flavor default
+%else
+%global flavor @BUILD_FLAVOR@%nil
+%endif
+
+Name:           yast2-schema-%{flavor}
+Version:        4.6.1
 Release:        0
 
 BuildRoot:      %{_tmppath}/%{name}-%{version}-build
-Source0:        %{name}-%{version}.tar.bz2
+Source0:        yast2-schema-%{version}.tar.bz2
 
 Group:	        System/YaST
 License:        GPL-2.0-or-later
-
 Url:            https://github.com/yast/yast-schema
 
 Provides:       yast2-schema = %{version}
 # others cannot be used as it contains same files
-Conflicts:      yast2-schema
+Conflicts:      otherproviders(yast2-schema)
 Obsoletes:      yast2-schema < 4.4.9
 
 # Dependencies needed to build the package
 BuildRequires:  jing
 BuildRequires:  libxml2-tools
-BuildRequires:	trang yast2-devtools
+BuildRequires:  trang
+BuildRequires:  yast2-devtools
 
 # All packages providing RNG files for AutoYaST
 # in /usr/share/YaST2/schema/autoyast/rng/*.rng
@@ -47,13 +52,33 @@ BuildRequires: autoyast2 >= 4.5.1
 BuildRequires: yast2
 # add_on_products and add_on_others types
 BuildRequires: yast2-add-on >= 4.3.3
-BuildRequires: yast2-audit-laf >= 4.3.0
-BuildRequires: yast2-auth-client >= 4.3.0
-BuildRequires: yast2-auth-server
 # set 't' element in 'initrd_module' element
 BuildRequires: yast2-bootloader >= 4.3.12
 BuildRequires: yast2-country >= 4.3.0
 BuildRequires: yast2-configuration-management >= 4.3.0
+# Added fcoe-client schema
+BuildRequires: yast2-fcoe-client >= 4.4.2
+BuildRequires: yast2-kdump
+# add route 'extrapara' element
+BuildRequires: yast2-network >= 4.5.4
+
+# registration is available only where suse connect is also available
+%ifnarch s390 %ix86
+# addons: architecture/version is optional
+BuildRequires: yast2-registration >= 4.3.12
+%endif
+
+# Add support for security policies ('security_policy')
+BuildRequires: yast2-security >= 4.5.3
+BuildRequires: yast2-services-manager
+# tag home_btrfs_subvolume
+BuildRequires: yast2-users >= 4.1.11
+
+# flavor specific dependencies
+%if "%flavor" == "default"
+BuildRequires: yast2-audit-laf >= 4.3.0
+BuildRequires: yast2-auth-client >= 4.3.0
+BuildRequires: yast2-auth-server
 # YaST DNS server package and modules depending on it is dropped from TW
 # (bsc#1205363)
 %if 0%{?sle_version}
@@ -61,9 +86,6 @@ BuildRequires: yast2-dhcp-server >= 4.3.0
 # allow 'zone' instead of 'listentry'
 BuildRequires: yast2-dns-server >= 4.3.3
 BuildRequires: yast2-http-server
-%endif
-# Added fcoe-client schema
-BuildRequires: yast2-fcoe-client >= 4.4.2
 BuildRequires: yast2-firewall >= 4.3.0
 BuildRequires: yast2-firstboot >= 4.3.0
 BuildRequires: yast2-ftp-server >= 4.3.0
@@ -72,10 +94,7 @@ BuildRequires: yast2-geo-cluster >= 4.3.0
 BuildRequires: yast2-installation
 # add 'iface' element
 BuildRequires: yast2-iscsi-client >= 4.3.3
-BuildRequires: yast2-kdump
 BuildRequires: yast2-mail >= 4.3.3
-# add route 'extrapara' element
-BuildRequires: yast2-network >= 4.5.4
 BuildRequires: yast2-nfs-client
 BuildRequires: yast2-nfs-server
 # YaST NIS packages are dropped from TW (bsc#1183893)
@@ -88,30 +107,21 @@ BuildRequires: yast2-ntp-client
 BuildRequires: yast2-online-update-configuration >= 4.5.1
 BuildRequires: yast2-printer
 BuildRequires: yast2-proxy
-# registration is available only where suse connect is also available
-%ifnarch s390 %ix86
-# addons: architecture/version is optional
-BuildRequires: yast2-registration >= 4.3.12
-%endif
 # Package available for S390 only
 %ifarch s390 s390x
 BuildRequires: yast2-s390
 %endif
 BuildRequires: yast2-samba-client
 BuildRequires: yast2-samba-server
-# Add support for security policies ('security_policy')
-BuildRequires: yast2-security >= 4.5.3
-BuildRequires: yast2-services-manager
 # YaST sound packages are dropped from TW (bsc#1206903)
 %if 0%{?sle_version}
 BuildRequires: yast2-sound
 %endif
 BuildRequires: yast2-squid
 BuildRequires: yast2-sysconfig
-# tag home_btrfs_subvolume
-BuildRequires: yast2-users >= 4.1.11
-
-
+%endif
+%endif
+  
 #!BuildIgnore: yast2-build-test
 
 # optimization suggested by AJ:
@@ -131,13 +141,21 @@ BuildRequires: yast2-users >= 4.1.11
 #!BuildIgnore: yast2-country-data
 #!BuildIgnore: yast2-control-center yast2-control-center-gnome yast2-control-center-qt
 
+%if "%flavor" == "micro"
+Summary: YaST2 - AutoYaST Schema for Micro
+%else
 Summary:	YaST2 - AutoYaST Schema
+%endif
 
 %description
+%if "%flavor" == "micro"
+AutoYaST Syntax Schema for Micro product
+%else
 AutoYaST Syntax Schema
+%endif
 
 %prep
-%setup -n %{name}-%{version}
+%setup -n yast2-schema-%{version}
 
 %build
 %yast_build
@@ -145,6 +163,8 @@ AutoYaST Syntax Schema
 %install
 %yast_install
 
+# rename the doc dir according to the current flavor
+mv %{buildroot}/%{_docdir}/yast2-schema %{buildroot}/%{_docdir}/%{name}
 
 %files
 %defattr(-,root,root)
@@ -155,3 +175,5 @@ AutoYaST Syntax Schema
 %{yast_schemadir}/autoyast/rng/*.rng
 %doc %{yast_docdir} 
 %license COPYING
+
+%changelog

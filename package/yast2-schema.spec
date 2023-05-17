@@ -16,13 +16,14 @@
 #
 
 
-%if "@BUILD_FLAVOR@" == ""
-%global flavor default
-%else
 %global flavor @BUILD_FLAVOR@%nil
+
+%if "%flavor" == ""
+Name:           yast2-schema
+%else
+Name:           yast2-schema-%{flavor}
 %endif
 
-Name:           yast2-schema-%{flavor}
 Version:        4.6.1
 Release:        0
 
@@ -75,7 +76,7 @@ BuildRequires: yast2-services-manager
 BuildRequires: yast2-users >= 4.1.11
 
 # flavor specific dependencies
-%if "%flavor" == "default"
+%if "%flavor" != "micro"
 BuildRequires: yast2-audit-laf >= 4.3.0
 BuildRequires: yast2-auth-client >= 4.3.0
 BuildRequires: yast2-auth-server
@@ -141,10 +142,15 @@ BuildRequires: yast2-sysconfig
 #!BuildIgnore: yast2-country-data
 #!BuildIgnore: yast2-control-center yast2-control-center-gnome yast2-control-center-qt
 
-Summary:	YaST2 - AutoYaST Schema ("%flavor" variant)
-
+%if "%flavor" != ""
+Summary:	YaST2 - AutoYaST Schema (%flavor variant)
 %description
-AutoYaST Syntax Schema ("%flavor" variant)
+AutoYaST Syntax Schema (%flavor variant)
+%else
+Summary:	YaST2 - AutoYaST Schema
+%description
+AutoYaST Syntax Schema
+%endif
 
 %prep
 %setup -n yast2-schema-%{version}
@@ -155,8 +161,10 @@ AutoYaST Syntax Schema ("%flavor" variant)
 %install
 %yast_install
 
+%if "%flavor" != ""
 # rename the doc dir according to the current flavor
 mv %{buildroot}/%{_docdir}/yast2-schema %{buildroot}/%{_docdir}/%{name}
+%endif
 
 %files
 %defattr(-,root,root)

@@ -55,5 +55,5 @@ jobs:
     - name: Package Build
       run: yast-ci-ruby -o package
       env:
-        # ignore modified spec file
+        # ignore not committed modifications above
         CHECK_MODIFIED: 0

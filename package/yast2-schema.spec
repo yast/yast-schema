@@ -141,18 +141,10 @@ BuildRequires: yast2-sysconfig
 #!BuildIgnore: yast2-country-data
 #!BuildIgnore: yast2-control-center yast2-control-center-gnome yast2-control-center-qt
 
-%if "%flavor" == "micro"
-Summary: YaST2 - AutoYaST Schema for Micro
-%else
-Summary:	YaST2 - AutoYaST Schema
-%endif
+Summary:	YaST2 - AutoYaST Schema ("%flavor" variant)
 
 %description
-%if "%flavor" == "micro"
-AutoYaST Syntax Schema for Micro product
-%else
-AutoYaST Syntax Schema
-%endif
+AutoYaST Syntax Schema ("%flavor" variant)
 
 %prep
 %setup -n yast2-schema-%{version}

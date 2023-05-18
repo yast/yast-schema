@@ -16,15 +16,13 @@ This package uses the [multibuild OBS feature](
 https://openbuildservice.org/help/manuals/obs-user-guide/cha.obs.multibuild.html)
 which allows to build several (sub)packages from the same sources.
 
-You can build two packages from the sources:
+You can build š packages from the sources:
 
 - `yast2-schema-default` - contains full schema for all YaST packages
 - `yast2-schema-micro` - smaller schema for minimized YaST installer,
   this is only used for some specific products
-
-Additionally you can build a single `yast2-schema` package which is the same
-as the `yast2-schema-default` but can used in products which do not have
-any "micro' variant.
+- `yast2-schema` - this is the same as the `yast2-schema-default` but can be used
+  in products which do not have any "micro' variant.
 
 To build a specific package locally run these commands:
 

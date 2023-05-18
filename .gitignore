@@ -32,4 +32,5 @@ tmp.*
 /doc/*.html
 *.rnc
 *.rng
-
+package/yast2-schema-default.spec
+package/yast2-schema-micro.spec

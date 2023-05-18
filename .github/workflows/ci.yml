@@ -30,5 +30,19 @@ jobs:
     - name: Inspect Installed Packages
       run: rpm -qa | sort
 
+    # this package uses multibuild OBS feature, prepare spec files for each build flavor
+    # and the default empty ("") flavor,  delete the _multibuild file,
+    # Leap build fails with _multibuild and multiple spec files, TW build is OK
+    - name: Prepare spec files
+      run: |
+        sed -e "s/@BUILD_FLAVOR@/default/g" package/yast2-schema.spec > package/yast2-schema-default.spec
+        sed -e "s/@BUILD_FLAVOR@/micro/g" package/yast2-schema.spec > package/yast2-schema-micro.spec
+        sed -i -e "s/@BUILD_FLAVOR@//g" package/yast2-schema.spec
+        chown -R -c 0 .
+        git rm package/_multibuild
+
     - name: Package Build
       run: yast-ci-ruby -o package
+      env:
+        # ignore the not committed modifications above
+        CHECK_MODIFIED: 0

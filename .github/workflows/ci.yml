@@ -24,29 +24,15 @@ jobs:
       uses: actions/checkout@v2
 
     - name: Install Dependencies
-      # workaround until the new packaging_rake_tasks gem is released
-      # run: rake build_dependencies:install
-      run: >
-        zypper --non-interactive install --allow-downgrade
-        autoyast2 jing libxml2-tools trang yast2 yast2-add-on yast2-audit-laf
-        yast2-auth-client yast2-auth-server yast2-bootloader
-        yast2-configuration-management yast2-country yast2-devtools
-        yast2-fcoe-client yast2-fcoe-client yast2-firewall yast2-firstboot
-        yast2-ftp-server yast2-geo-cluster yast2-installation yast2-iscsi-client
-        yast2-kdump yast2-mail yast2-network yast2-nfs-client yast2-nfs-server
-        yast2-ntp-client yast2-online-update-configuration yast2-printer
-        yast2-proxy yast2-registration yast2-samba-client yast2-samba-server
-        yast2-security yast2-services-manager yast2-squid yast2-sysconfig
-        yast2-tftp-server yast2-users
+      run: rake build_dependencies:install
 
     # just for easier debugging...
     - name: Inspect Installed Packages
       run: rpm -qa | sort
 
     # this package uses multibuild OBS feature, prepare spec files for each build flavor
-    # OBS additionally builds empty ("") flavor
-    # delete the _multibuild file, Leap build fails with _multibuild and multiple
-    # spec files (TW build is OK)
+    # and the default empty ("") flavor,  delete the _multibuild file,
+    # Leap build fails with _multibuild and multiple spec files, TW build is OK
     - name: Prepare spec files
       run: |
         sed -e "s/@BUILD_FLAVOR@/default/g" package/yast2-schema.spec > package/yast2-schema-default.spec
@@ -58,5 +44,5 @@ jobs:
     - name: Package Build
       run: yast-ci-ruby -o package
       env:
-        # ignore not committed modifications above
+        # ignore the not committed modifications above
         CHECK_MODIFIED: 0

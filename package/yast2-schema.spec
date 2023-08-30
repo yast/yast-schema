@@ -24,7 +24,7 @@ Name:           yast2-schema
 Name:           yast2-schema-%{flavor}
 %endif
 
-Version:        4.6.1
+Version:        5.0.0
 Release:        0
 
 BuildRoot:      %{_tmppath}/%{name}-%{version}-build

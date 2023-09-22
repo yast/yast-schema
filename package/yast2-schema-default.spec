@@ -18,7 +18,7 @@
 
 Name:           yast2-schema-default
 # Keep versions in sync with yast2-schema-micro
-Version:        4.6.0
+Version:        4.6.1
 Release:        0
 
 BuildRoot:      %{_tmppath}/%{name}-%{version}-build
@@ -42,8 +42,8 @@ BuildRequires:	trang yast2-devtools
 # All packages providing RNG files for AutoYaST
 # in /usr/share/YaST2/schema/autoyast/rng/*.rng
 
-# fix 'rules' validation ('conflicts' and 'dialog')
-BuildRequires: autoyast2 >= 4.5.1
+# LUKS-related elements in the partitioning schema
+BuildRequires: autoyast2 >= 4.6.4
 BuildRequires: yast2
 # add_on_products and add_on_others types
 BuildRequires: yast2-add-on >= 4.3.3

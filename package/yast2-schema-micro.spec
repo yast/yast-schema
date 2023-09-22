@@ -17,7 +17,7 @@
 
 
 Name:           yast2-schema-micro
-Version:        4.6.0
+Version:        4.6.1
 Release:        0
 
 BuildRoot:      %{_tmppath}/%{name}-%{version}-build
@@ -39,8 +39,8 @@ BuildRequires:  libxml2-tools
 BuildRequires:  trang
 BuildRequires:  yast2-devtools
 
-# fix 'rules' validation ('conflicts' and 'dialog')
-BuildRequires: autoyast2 >= 4.5.1
+# LUKS-related elements in the partitioning schema
+BuildRequires: autoyast2 >= 4.6.4
 BuildRequires:  yast2
 BuildRequires:  yast2-add-on >= 4.3.3
 # set 't' element in 'initrd_module' element

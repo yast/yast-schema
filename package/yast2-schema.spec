@@ -49,7 +49,7 @@ BuildRequires:  yast2-devtools
 # in /usr/share/YaST2/schema/autoyast/rng/*.rng
 
 # LUKS-related elements in the partitioning schema
-BuildRequires: autoyast2 >= 4.6.4
+BuildRequires: autoyast2 >= 5.0.1
 BuildRequires: yast2
 # add_on_products and add_on_others types
 BuildRequires: yast2-add-on >= 4.3.3

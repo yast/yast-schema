@@ -1,9 +1,8 @@
-
 # See https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions
 
 name: CI
 
-on: [push, pull_request]
+on: [ push, pull_request ]
 
 jobs:
 
@@ -13,36 +12,35 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        distro:  [ "tumbleweed", "leap_latest" ]
+        distro: [ "tumbleweed" ]
 
     container:
       image: registry.opensuse.org/yast/head/containers_${{matrix.distro}}/yast-ruby
 
     steps:
+      - name: Git Checkout
+        uses: actions/checkout@v2
 
-    - name: Git Checkout
-      uses: actions/checkout@v2
+      - name: Install Dependencies
+        run: rake build_dependencies:install
 
-    - name: Install Dependencies
-      run: rake build_dependencies:install
+      # just for easier debugging...
+      - name: Inspect Installed Packages
+        run: rpm -qa | sort
 
-    # just for easier debugging...
-    - name: Inspect Installed Packages
-      run: rpm -qa | sort
+      # this package uses multibuild OBS feature, prepare spec files for each build flavor
+      # and the default empty ("") flavor,  delete the _multibuild file,
+      # Leap build fails with _multibuild and multiple spec files, TW build is OK
+      - name: Prepare spec files
+        run: |
+          sed -e "s/@BUILD_FLAVOR@/default/g" package/yast2-schema.spec > package/yast2-schema-default.spec
+          sed -e "s/@BUILD_FLAVOR@/micro/g" package/yast2-schema.spec > package/yast2-schema-micro.spec
+          sed -i -e "s/@BUILD_FLAVOR@//g" package/yast2-schema.spec
+          chown -R -c 0 .
+          git rm package/_multibuild
 
-    # this package uses multibuild OBS feature, prepare spec files for each build flavor
-    # and the default empty ("") flavor,  delete the _multibuild file,
-    # Leap build fails with _multibuild and multiple spec files, TW build is OK
-    - name: Prepare spec files
-      run: |
-        sed -e "s/@BUILD_FLAVOR@/default/g" package/yast2-schema.spec > package/yast2-schema-default.spec
-        sed -e "s/@BUILD_FLAVOR@/micro/g" package/yast2-schema.spec > package/yast2-schema-micro.spec
-        sed -i -e "s/@BUILD_FLAVOR@//g" package/yast2-schema.spec
-        chown -R -c 0 .
-        git rm package/_multibuild
-
-    - name: Package Build
-      run: yast-ci-ruby -o package
-      env:
-        # ignore the not committed modifications above
-        CHECK_MODIFIED: 0
+      - name: Package Build
+        run: yast-ci-ruby -o package
+        env:
+          # ignore the not committed modifications above
+          CHECK_MODIFIED: 0

@@ -17,7 +17,7 @@
 
 
 Name:           yast2-schema-micro
-Version:        4.6.1
+Version:        4.6.2
 Release:        0
 
 BuildRoot:      %{_tmppath}/%{name}-%{version}-build
@@ -51,7 +51,7 @@ BuildRequires:  yast2-country >= 4.3.0
 BuildRequires:  yast2-iscsi-client >= 4.3.3
 # Added fcoe-client schema
 BuildRequires: yast2-fcoe-client >= 4.3.1
-BuildRequires:  yast2-kdump
+BuildRequires:  yast2-kdump >= 4.6.1
 # add route 'extrapara' element
 BuildRequires:  yast2-network >= 4.5.4
 # registration is available only where suse connect is also available

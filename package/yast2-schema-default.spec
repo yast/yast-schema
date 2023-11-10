@@ -18,7 +18,7 @@
 
 Name:           yast2-schema-default
 # Keep versions in sync with yast2-schema-micro
-Version:        4.6.1
+Version:        4.6.2
 Release:        0
 
 BuildRoot:      %{_tmppath}/%{name}-%{version}-build
@@ -72,7 +72,7 @@ BuildRequires: yast2-geo-cluster >= 4.3.0
 BuildRequires: yast2-installation
 # add 'iface' element
 BuildRequires: yast2-iscsi-client >= 4.3.3
-BuildRequires: yast2-kdump
+BuildRequires: yast2-kdump >= 4.6.1
 BuildRequires: yast2-mail >= 4.3.3
 # add route 'extrapara' element
 BuildRequires: yast2-network >= 4.5.4

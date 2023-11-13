@@ -1,4 +1,11 @@
 -------------------------------------------------------------------
+Mon Nov 13 15:39:29 UTC 2023 - Josef Reidinger <jreidinger@suse.com>
+
+- One more bump to use really the proper SP6 version of yast2-kdump
+  (bsc#1217057)
+- 4.6.3
+
+-------------------------------------------------------------------
 Fri Nov 10 08:28:42 UTC 2023 - Josef Reidinger <jreidinger@suse.com>
 
 - Bump schema to adapt for version kdump versions 1.9+ (bsc#1212646) 

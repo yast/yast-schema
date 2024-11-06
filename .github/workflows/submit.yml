@@ -13,7 +13,7 @@ on:
 jobs:
   submit:
     # do not run in forks
-    # if: github.repository_owner == 'yast'
+    if: ${{ !github.event.repository.fork }}
 
     runs-on: ubuntu-latest
 
@@ -23,7 +23,7 @@ jobs:
     steps:
       - name: Submit the package
         # see https://github.com/yast/actions/blob/master/submit/action.yml
-        uses: lslezak/actions/submit@master
+        uses: yast/actions/submit@master
         with:
           obs_user:     ${{ secrets.OBS_USER }}
           obs_password: ${{ secrets.OBS_PASSWORD }}

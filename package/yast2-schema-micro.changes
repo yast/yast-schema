@@ -1,4 +1,11 @@
 -------------------------------------------------------------------
+Fri Feb 21 16:45:11 UTC 2025 - Knut Anderssen <kanderssen@suse.com>
+
+- Allow to specify pervasive encryption's APQNs and key type
+  (jsc#PED-10950).
+- 4.7.1
+
+-------------------------------------------------------------------
 Fri Sep 06 07:14:32 UTC 2024 - Ladislav Slezák <lslezak@suse.com>
 
 - Branch package for SP7 (bsc#1230201)

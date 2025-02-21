@@ -42,8 +42,8 @@ BuildRequires:	trang yast2-devtools
 # All packages providing RNG files for AutoYaST
 # in /usr/share/YaST2/schema/autoyast/rng/*.rng
 
-# LUKS-related elements in the partitioning schema
-BuildRequires: autoyast2 >= 4.6.4
+# pervasive APQNS and key type elements in the partitioning schema
+BuildRequires: autoyast2 >= 4.7.1
 BuildRequires: yast2
 # add_on_products and add_on_others types
 BuildRequires: yast2-add-on >= 4.3.3

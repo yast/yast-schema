@@ -39,8 +39,8 @@ BuildRequires:  libxml2-tools
 BuildRequires:  trang
 BuildRequires:  yast2-devtools
 
-# LUKS-related elements in the partitioning schema
-BuildRequires: autoyast2 >= 4.6.4
+# pervasive APQNS and key type elements in the partitioning schema
+BuildRequires: autoyast2 >= 4.7.1
 BuildRequires:  yast2
 BuildRequires:  yast2-add-on >= 4.3.3
 # set 't' element in 'initrd_module' element

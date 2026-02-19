@@ -24,7 +24,7 @@ Name:           yast2-schema
 Name:           yast2-schema-%{flavor}
 %endif
 
-Version:        5.0.2
+Version:        5.0.3
 Release:        0
 
 BuildRoot:      %{_tmppath}/%{name}-%{version}-build
@@ -95,7 +95,6 @@ BuildRequires: yast2-geo-cluster >= 4.3.0
 BuildRequires: yast2-installation
 # add 'iface' element
 BuildRequires: yast2-iscsi-client >= 4.3.3
-BuildRequires: yast2-mail >= 4.3.3
 BuildRequires: yast2-nfs-client
 BuildRequires: yast2-nfs-server
 # YaST NIS packages are dropped from TW (bsc#1183893)
